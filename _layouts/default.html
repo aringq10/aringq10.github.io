@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     {% include header.html %}
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
     <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}" defer></script>
   </head>
   <body>

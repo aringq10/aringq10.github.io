@@ -1,3 +1,17 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --primary-color: #007acc;
+  --header-font: "Unica One";
+  --text-font: "Vollkorn";
+}
+
+[data-theme=dark] {
+  --bg-color: #111111;
+  --text-color: #ffffff;
+  --primary-color: #1e90ff;
+}
+
 * {
   box-sizing: border-box;
   font-family: var(--text-font);
@@ -48,20 +62,6 @@ main {
   height: calc(100% - 100px);
   padding: 25px 50px;
   overflow-y: scroll;
-}
-
-:root {
-  --bg-color: #ffffff;
-  --text-color: #111111;
-  --primary-color: #007acc;
-  --header-font: "Unica One";
-  --text-font: "Vollkorn";
-}
-
-[data-theme=dark] {
-  --bg-color: #111111;
-  --text-color: #ffffff;
-  --primary-color: #1e90ff;
 }
 
 /*# sourceMappingURL=styles.css.map */
