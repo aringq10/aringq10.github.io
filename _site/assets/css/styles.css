@@ -1,5 +1,67 @@
+* {
+  box-sizing: border-box;
+  font-family: var(--text-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font);
+}
+
 .current {
   color: red;
+}
+
+html, body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+html a, body a {
+  color: var(--primary-color);
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+nav > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+  height: 100%;
+}
+nav > a {
+  transition: all 0.1s ease-in-out;
+}
+nav > a:hover {
+  background-color: #333;
+}
+
+main {
+  width: 100%;
+  height: calc(100% - 100px);
+  padding: 25px 50px;
+  overflow-y: scroll;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --primary-color: #007acc;
+  --header-font: "Unica One";
+  --text-font: "Vollkorn";
+}
+
+[data-theme=dark] {
+  --bg-color: #111111;
+  --text-color: #ffffff;
+  --primary-color: #1e90ff;
 }
 
 /*# sourceMappingURL=styles.css.map */

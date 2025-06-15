@@ -1,0 +1,16 @@
+// _variables.scss
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --primary-color: #007acc;
+  
+  --header-font: "Unica One";
+  --text-font: "Vollkorn";
+}
+
+[data-theme="dark"] {
+  --bg-color: #111111;
+  --text-color: #ffffff;
+  --primary-color: #1e90ff;
+}
