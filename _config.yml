@@ -1,13 +1,6 @@
-collections:
-  authors:
-    output: true
+permalink: pretty
 
 defaults:
-  - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "author"
   - scope:
       path: ""
       type: "posts"

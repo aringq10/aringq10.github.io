@@ -1,0 +1,7 @@
+Gemfile, Gemfile.lock = gem(package) version managing
+./assets = css + js
+./_sass = actual (s)css
+./_data = navigation.yml + ???
+./_includes = helper html files
+./_site = rendered html + css + js
+./_layouts = reusable html layouts
