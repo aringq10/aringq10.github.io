@@ -1,18 +1,35 @@
 // variables.scss
 
 :root {
-  --bg-color: #fff1de;
-  --text-color: #111111;
-  --primary-color: #007acc;
-  --hover-color: #ffffff;
-  
-  --header-font: "Unica One";
-  --text-font: "Vollkorn";
+    --bg-color: #fff;
+    --text-color: #111;
+    --primary-color: #007acc;
+    --hover-color: #bbb;
+
+    --theme-toggle-speed: 0.1s;
+    --lm-icon-color: yellow;
+    --dm-icon-color: #111;
+
+    // text
+    --header-font: "Roboto Condensed", Arial, sans-serif;
+    --text-font: "Hind Guntur", sans-serif;
+    --big-font: 24px;
+    --medium-font: 16px;
+    --small-font: 12px;
 }
 
 [data-theme="dark"] {
-  --bg-color: #111111;
-  --text-color: #fff1de;
-  --primary-color: #1e90ff;
-  --hover-color: #333333;
+    --bg-color: #111;
+    --text-color: #fff;
+    --primary-color: #1e90ff;
+    --hover-color: #333333;
+}
+
+
+body[data-theme="dark"] #light-icon {
+    display: none;
+}
+
+body[data-theme="dark"] #dark-icon {
+    display: inline;
 }
