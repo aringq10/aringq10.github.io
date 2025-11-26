@@ -1,3 +1,7 @@
+# "dark" or "light"
+color_theme: "dark"
+
+
 permalink: pretty
 
 defaults:
