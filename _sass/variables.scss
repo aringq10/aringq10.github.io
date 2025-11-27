@@ -1,16 +1,10 @@
 // variables.scss
 
 :root {
-    --bg-color: #fff;
-    --text-color: #111;
-    --primary-color: #007acc;
-    --hover-color: #bbb;
-
     --theme-toggle-speed: 0.1s;
-    --lm-icon-color: yellow;
+    --lm-icon-color: #fff;
     --dm-icon-color: #111;
 
-    // text
     --header-font: "Roboto Condensed", Arial, sans-serif;
     --text-font: "Hind Guntur", sans-serif;
     --big-font: 24px;
@@ -18,18 +12,28 @@
     --small-font: 12px;
 }
 
+[data-theme="light"] {
+    --nav-color: #ddd;
+    --bg-color: #fff;
+    --text-color: #111;
+    --primary-color: #007acc;
+    --hover-color: #bbb;
+
+    --dm-icon-display: inline;
+    --lm-icon-display: none;
+    --gh-icon-color: #111;
+    --yt-icon-color: #111;
+}
 [data-theme="dark"] {
+    --nav-color: #0c0c0c;
     --bg-color: #111;
     --text-color: #fff;
     --primary-color: #1e90ff;
     --hover-color: #333333;
+
+    --dm-icon-display: none;
+    --lm-icon-display: inline;
+    --gh-icon-color: #fff;
+    --yt-icon-color: #fff;
 }
 
-
-body[data-theme="dark"] #light-icon {
-    display: none;
-}
-
-body[data-theme="dark"] #dark-icon {
-    display: inline;
-}

@@ -1,0 +1,26 @@
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    > * {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        font-size: var(--medium-font);
+    }
+}
+
+#gh-icon {
+    width: 25px;
+    height: 25px;
+    fill: var(--gh-icon-color)
+}
+#yt-icon {
+    // width: 35px;
+    height: 25px;
+    fill: var(--yt-icon-color)
+}

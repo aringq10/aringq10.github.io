@@ -6,8 +6,25 @@
   </head>
   <body>
     {% include navigation.html %}
-    <main>
-      {{ content }}
-    </main>
+    <div id="content-window">
+      <div id="content-wrapper">
+        <main>
+          {{ content }}
+        </main>
+        {% include footer.html %}
+      </div>
+    </div>
   </body>
+  <script>
+      document.getElementById('theme-toggle').addEventListener('click', function () {
+          const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+      });
+      document.getElementById('nav-dropdown-toggle').addEventListener('click', function () {
+          document.getElementById('nav-links').classList.toggle('open');
+          document.getElementById('dropdown-icon').classList.toggle('rotated');
+          document.getElementById('content-window').classList.toggle('no-scroll');
+      });
+  </script>
 </html>
