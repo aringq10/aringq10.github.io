@@ -45,6 +45,7 @@ nav {
     width: 64px;
     height: 64px;
     fill: var(--text-color);
+    transition: transform 0.25s ease;
 }
 #light-icon {
     width: 32px;
