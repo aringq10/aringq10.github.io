@@ -1,13 +1,12 @@
 .current {
-    color: red;
+    color: var(--nav-curr-color);
 }
 
 nav {
     width: 100%;
-    height: 100px;
+    height: var(--navbar-height);
     background-color: var(--nav-color);
     display: flex;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     z-index: 9999;
 }
 
@@ -20,7 +19,7 @@ nav {
         align-items: center;
         justify-content: center;
         height: 100%;
-        -webkit-tap-highlight-color: transparent;
+        // -webkit-tap-highlight-color: transparent;
         transition: all 0.1s ease-in-out;
         @include hover-supported() {
             background-color: var(--hover-color);
@@ -29,11 +28,12 @@ nav {
 }
 #theme-toggle, #nav-dropdown-toggle {
     cursor: pointer;
-    width: 100px;
+    width: var(--navbar-height);
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
+    -webkit-tap-highlight-color: transparent;
 }
 #theme-toggle {
     margin-left: auto;
@@ -45,7 +45,8 @@ nav {
     width: 64px;
     height: 64px;
     fill: var(--text-color);
-    transition: transform 0.25s ease;
+    transform: rotate(-90deg);
+    transition: transform var(--navbar-popout-speed) ease;
 }
 #light-icon {
     width: 32px;
@@ -60,15 +61,15 @@ nav {
     display: var(--dm-icon-display);
 }
 
-@media (max-width: 700px) {
+@media (max-width: $mobile-breakpoint) {
     #nav-links {
-        display: none;
-        background-color: var(--bg-color);
+        display: flex;
+        background-color: var(--nav-popout-color);
         overflow-y: scroll;
         position: fixed;
         top: 100px;
-        left: 0;
-        right: 0;
+        left: -100%;
+        right: 100%;
         bottom: 0;
         flex-direction: column;
         > * {
@@ -76,15 +77,18 @@ nav {
             padding: 20px 0;
             display: flex;
         }
+        transition: all var(--navbar-popout-speed) ease;
     }
     #nav-dropdown-toggle {
         display: flex;
     }
     #nav-links.open {
         display: flex;
+        left: 0;
+        right: 0;
     }
     #dropdown-icon.rotated {
-        transform: rotate(180deg);
+        transform: rotate(90deg);
     }
     #content-window.no-scroll {
       overflow: hidden;

@@ -1,19 +1,32 @@
 // variables.scss
 
+// sass variables
+    $mobile-breakpoint: 600px;
+
 :root {
+    // navbar
+    --navbar-height: 100px;
+    --navbar-popout-speed: 0.25s;
+    --nav-curr-color: #d00;
+
     --theme-toggle-speed: 0.1s;
     --lm-icon-color: #fff;
     --dm-icon-color: #111;
 
+
+    // text
     --header-font: "Roboto Condensed", Arial, sans-serif;
     --text-font: "Hind Guntur", sans-serif;
-    --big-font: 24px;
-    --medium-font: 16px;
-    --small-font: 12px;
+    --base-font: 20px;
+    --big-font: 2rem;
+    --medium-font: 1rem;
+    --small-font: 0.75rem;
+    --footer-font-size: 0.75rem;
 }
 
 [data-theme="light"] {
     --nav-color: #ddd;
+    --nav-popout-color: #f8f8f8;
     --bg-color: #fff;
     --text-color: #111;
     --primary-color: #007acc;
@@ -25,8 +38,9 @@
     --yt-icon-color: #111;
 }
 [data-theme="dark"] {
-    --nav-color: #0c0c0c;
-    --bg-color: #111;
+    --nav-color: #111;
+    --nav-popout-color: #1e1e1e;
+    --bg-color: #222;
     --text-color: #fff;
     --primary-color: #1e90ff;
     --hover-color: #333333;
