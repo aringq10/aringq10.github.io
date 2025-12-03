@@ -61,6 +61,10 @@ main {
     display: flex;
     flex-direction: column;
 }
+// Center posts vertically
+body.post main {
+    padding-top: 10%;
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--header-font);
     font-style: italic;
