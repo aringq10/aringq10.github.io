@@ -1,22 +1,23 @@
 // variables.scss
 
 // sass variables
-    $mobile-breakpoint: 600px;
+    $mobile-breakpoint: 700px;
 
 :root {
     // navbar
     --navbar-height: 100px;
     --navbar-popout-speed: 0.25s;
-    --nav-curr-color: #d00;
+    --nav-curr-color: var(--primary-color);
 
     --theme-toggle-speed: 0.1s;
     --lm-icon-color: #fff;
     --dm-icon-color: #111;
 
+    --icon-color: var(--text-color);
 
     // text
     --header-font: "Roboto Condensed", Arial, sans-serif;
-    --text-font: "Hind Guntur", sans-serif;
+    --text-font: "Source Code Pro", sans-serif;
     --base-font: 20px;
     --big-font: 2rem;
     --medium-font: 1rem;
@@ -29,7 +30,7 @@
     --nav-popout-color: #f8f8f8;
     --bg-color: #fff;
     --text-color: #111;
-    --primary-color: #007acc;
+    --primary-color: #007aff;
     --hover-color: #bbb;
 
     --dm-icon-display: inline;

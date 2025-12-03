@@ -3,4 +3,23 @@ layout: default
 title: La Mia Casa
 ---
 
-<h1>Holá amigos, mi nombre es aringo chivilko</h1>
+<h1>Aringo Chivilko</h1>
+
+<div id="links">
+  <a href="{{ site.github_link }}" target="_blank">
+    <!--<div class="svg-import" data-file="github-icon.svg" svg-id="gh-icon"></div>-->
+    {% include icons/github.svg %}
+    <p>
+      {{ site.github_username }}
+    </p>
+  </a>
+  <a class="click-copy">
+    <!--<div class="svg-import" data-file="email-icon.svg" svg-id="email-icon"></div>-->
+    {% include icons/email.svg %}
+    <p class="copy-target">
+      {{ site.email }}
+    </p>
+  </a>
+
+</div>
+
