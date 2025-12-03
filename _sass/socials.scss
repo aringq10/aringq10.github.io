@@ -2,11 +2,13 @@
     font-size: var(--small-font);
 }
 #links a {
-    cursor: pointer;
+    width: max-content;
+    border-radius: 9999px;
     display: flex;
     align-items: center;
     gap: 0.2rem;
     padding: 0.4rem;
+    margin-left: -0.4rem;
     transition: all 0.1s ease-in-out;
     @include hover-supported() {
         background-color: var(--hover-color);

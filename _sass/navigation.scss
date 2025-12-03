@@ -2,15 +2,25 @@ nav {
     width: 100%;
     height: var(--navbar-height);
     background-color: var(--nav-color);
-    display: flex;
     z-index: 9999;
+    display: flex;
+    justify-content: center;
+}
+
+#nav-wrapper {
+    width: 100%;
+    max-width: var(--content-width);
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 #nav-links {
     flex: 1;
     display: flex;
+    height: 100%;
     > a {
-        padding: 0 30px;
+        padding: 0 var(--side-padding);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -64,8 +74,8 @@ nav {
 @media (max-width: $mobile-breakpoint) {
     #nav-links {
         display: flex;
-        background-color: var(--nav-popout-color);
-        overflow-y: scroll;
+        background-color: var(--nav-dropdown-color);
+        overflow-y: auto;
         position: fixed;
         top: 100px;
         left: -100%;

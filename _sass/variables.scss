@@ -4,11 +4,15 @@
     $mobile-breakpoint: 700px;
 
 :root {
+    --side-padding: 30px;
+    --content-width: 1000px;
+
     // navbar
     --navbar-height: 100px;
     --navbar-popout-speed: 0.25s;
     --nav-curr-color: var(--primary-color);
 
+    // theme toggle
     --theme-toggle-speed: 0.1s;
     --lm-icon-color: #fff;
     --dm-icon-color: #111;
@@ -27,7 +31,7 @@
 
 [data-theme="light"] {
     --nav-color: #ddd;
-    --nav-popout-color: #f8f8f8;
+    --nav-dropdown-color: #f8f8f8;
     --bg-color: #fff;
     --text-color: #111;
     --primary-color: #007aff;
@@ -40,7 +44,7 @@
 }
 [data-theme="dark"] {
     --nav-color: #111;
-    --nav-popout-color: #1e1e1e;
+    --nav-dropdown-color: #1e1e1e;
     --bg-color: #222;
     --text-color: #fff;
     --primary-color: #1e90ff;
