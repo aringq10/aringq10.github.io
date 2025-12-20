@@ -7,8 +7,8 @@
       }
     </style>
     {% include header.html %}
-    {% if page.custom_style %}
-    {{ page.custom_style }}
+    {% if layout.custom_style %}
+      <link rel="stylesheet" href="{{ layout.custom_style | relative_url }}">
     {% endif %}
     <title>{{ page.title }}</title>
   </head>
