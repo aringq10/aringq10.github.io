@@ -1,27 +1,38 @@
-<nav>
-  <div id="nav-wrapper">
-    <div id="nav-dropdown-toggle">
-      <!--<div class="svg-import" data-file="dropdown-icon.svg" svg-id="dropdown-icon"></div>-->
-      {% include icons/dropdown.svg %}
-    </div>
-    <div id="nav-links" class="no-scrollbar">
-      {% for item in site.data.navigation %}
-      <a href="{{ item.link }}" {% if page.url == item.link %} class="current" {% endif %}>
-        {{ item.name }}
-      </a>
-      {% endfor %}
-      <hr>
-      <a id="clear-cache-btn" onclick="localStorage.clear(); location.reload()">
-        Clear<br>Cache
-      </a>
-      <input type="range" id="font-slider" min="12" max="48" value="16">
-    </div>
+<div id="nav-wrapper">
+  <div id="nav">
+    <div id="nav-inner">
+      <div id="nav-dropdown-toggle">
+        <!--<div class="svg-import" data-file="dropdown-icon.svg" svg-id="dropdown-icon"></div>-->
+        {% include icons/dropdown.svg %}
+      </div>
+      <div id="nav-links" class="no-scrollbar">
+        {% for item in site.data.navigation %}
+        <a href="{{ item.link }}" {% if page.url == item.link %} class="current" {% endif %}>
+          {{ item.name }}
+        </a>
+        {% endfor %}
+        <a id="clear-cache-btn" onclick="localStorage.clear(); location.reload()">
+          clear<br>cache
+        </a>
+      </div>
 
-    <div id="theme-toggle">
-      <!--<div class="svg-import" data-file="dark-mode.svg" svg-id="dark-icon"></div>-->
-      {% include icons/dark-mode.svg %}
-      <!--<div class="svg-import" data-file="light-mode.svg" svg-id="light-icon"></div>-->
-      {% include icons/light-mode.svg %}
+      <div id="theme-toggle">
+        <!--<div class="svg-import" data-file="dark-mode.svg" svg-id="dark-icon"></div>-->
+        {% include icons/dark-mode.svg %}
+        <!--<div class="svg-import" data-file="light-mode.svg" svg-id="light-icon"></div>-->
+        {% include icons/light-mode.svg %}
+      </div>
     </div>
   </div>
-</nav>
+  <div id="sub-nav">
+    <div id="sub-nav-inner">
+      {% if page.layout == "post" %}
+      <a href="/blog">Back to blog</a>
+      {% endif %}
+      <a href="#content-wrapper">
+        Back to top
+      </a>
+    </div>
+  </div>
+
+</div>

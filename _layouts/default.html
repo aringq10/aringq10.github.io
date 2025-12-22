@@ -33,17 +33,5 @@
           document.getElementById('dropdown-icon').classList.toggle('rotated');
           document.getElementById('content-window').classList.toggle('no-scroll');
       });
-
-      const root = document.documentElement;
-      // Initialize slider value from localStorage or CSS variable
-      let storedFont = localStorage.getItem("base-font");
-      if (!storedFont) {
-        // Get from CSS variable
-        const rootStyles = getComputedStyle(root);
-        storedFont = parseFloat(rootStyles.getPropertyValue("--base-font").trim());
-      }
-
-      // Apply initial value
-      root.style.fontSize = storedFont + "px";
-      </script>
+  </script>
 </html>

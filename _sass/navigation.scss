@@ -1,20 +1,48 @@
-nav {
-    width: 100%;
-    height: var(--navbar-height);
-    background-color: var(--nav-color);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-}
-
 #nav-wrapper {
     width: 100%;
-    max-width: var(--content-width);
-    height: 100%;
+    height: var(--navbar-height);
+    z-index: 9999;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
+#nav {
+    height: var(--nav-height);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--nav-color);
+    #nav-inner {
+        width: 100%;
+        max-width: var(--content-width);
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+#sub-nav{
+    height: var(--sub-nav-height);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--nav-color);
+
+    #sub-nav-inner {
+        width: 100%;
+        max-width: var(--content-width);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        > a {
+            font-size: var(--small-font);
+            padding: 0 var(--side-padding);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+    }
+}
 #nav-links {
     flex: 1;
     display: flex;
@@ -25,7 +53,6 @@ nav {
         align-items: center;
         justify-content: center;
         height: 100%;
-        // -webkit-tap-highlight-color: transparent;
         color: var(--text-color);
         transition: all 0.1s ease-in-out;
         @include hover-supported() {
@@ -38,7 +65,7 @@ nav {
 }
 #theme-toggle, #nav-dropdown-toggle {
     cursor: pointer;
-    width: var(--navbar-height);
+    width: var(--nav-height);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,7 +104,7 @@ nav {
         background-color: var(--nav-dropdown-color);
         overflow-y: auto;
         position: fixed;
-        top: 100px;
+        top: var(--nav-height);
         left: -100%;
         right: 100%;
         bottom: 0;
@@ -90,10 +117,6 @@ nav {
         }
         > * {
             width: 100%;
-        }
-        > #font-slider {
-            width: 60%;
-            margin: 20px 0;
         }
         transition: all var(--navbar-popout-speed) ease;
     }

@@ -2,6 +2,11 @@
 excerpt: Modlist for personal MC world.
 ---
 
+Minecraft **1.21.1**
+<br>
+NeoForge **21.1.215**
+<br>
+<br>
 1. [WorldGen](#worldgen)
 1. [New Items](#new-items)
 1. [New Mobs](#new-mobs)
@@ -9,31 +14,32 @@ excerpt: Modlist for personal MC world.
 1. [Server-side](#server-side)
 1. [Client-side](#client-side)
 1. [Performance](#performance)
-1. [API's](#apis)
+1. [APIs](#apis)
 <br>
 <br>
 
 ### WorldGen
-- Adds new blocks
-    - Biomes O' Plenty
-    - Yung's Cave Biomes (New items, mobs)
-- Uses vanilla blocks
-    - Yung's Better Caves
-    - Yung's Better Desert Temples
-    - Yung's Better Dungeons
-    - Yung's Better End Island
-    - Yung's Better Jungle Temples
-    - Yung's Better Mineshafts
-    - Yung's Better Nether Fortresses
-    - Yung's Better Ocean Monuments
-    - Yung's Better Strongholds
-    - Yung's Better Witch Huts
-    - Yung's Bridges
-    - Yung's Extras
-    - Terralith
-    - Tectonic
-    - Dungeons and Taverns
-    - Farmers Structures (requires Farmer's Delight)
+Adds new blocks
+- Biomes O' Plenty
+- Yung's Cave Biomes (New items, mobs)
+
+Uses vanilla blocks
+- Yung's Better Caves
+- Yung's Better Desert Temples
+- Yung's Better Dungeons
+- Yung's Better End Island
+- Yung's Better Jungle Temples
+- Yung's Better Mineshafts
+- Yung's Better Nether Fortresses
+- Yung's Better Ocean Monuments
+- Yung's Better Strongholds
+- Yung's Better Witch Huts
+- Yung's Bridges
+- Yung's Extras
+- Terralith
+- Tectonic
+- Dungeons and Taverns
+- Farmers Structures (requires Farmer's Delight)
 
 ### New Items
 - Macaw's Bridges
@@ -54,7 +60,6 @@ excerpt: Modlist for personal MC world.
 - JourneyMap
 - JEI
 - Distant Horizons
-- Clumps
 - Dynamic Lights
 - Enchantment Descriptions
 - Fusion (Connected Textures)
@@ -62,11 +67,14 @@ excerpt: Modlist for personal MC world.
 ### Performance
 - Sodium (C)
 - Iris (C)
-- Lithium (CS)
 - ImmediatelyFast (C)
+- Entity Culling (C)
+- Clumps (C)
+- Dynamic FPS (C)
+- Lithium (CS)
 - FerriteCore (CS)
 
-### API's
+### APIs
 - Yung's API
 - GeckoLib (Yung's Cave Biomes)
 - Terrablender, GlithCore (Biomes O' Plenty)

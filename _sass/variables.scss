@@ -6,11 +6,13 @@
 :root {
     // content
     --side-padding: 30px;
-    --vertical-padding: 15px;
+    --vertical-padding: 35px;
     --content-width: 1000px;
 
     // navbar
-    --navbar-height: 100px;
+    --navbar-height: calc(var(--nav-height) + var(--sub-nav-height));
+    --nav-height: 70px;
+    --sub-nav-height: 30px;
     --navbar-popout-speed: 0.25s;
     --nav-curr-color: var(--primary-color);
 

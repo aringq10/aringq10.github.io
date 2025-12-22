@@ -91,17 +91,4 @@ function importSVGs() {
 // Run the function after DOM is ready
 document.addEventListener('DOMContentLoaded', importSVGs);
 document.addEventListener('DOMContentLoaded', copyHandle);
-document.addEventListener('DOMContentLoaded', function() {
 
-    const slider = document.getElementById("font-slider");
-    const root = document.documentElement;
-
-    slider.value = parseFloat(root.style.fontSize.trim());
-
-    // Update on slider input
-    slider.addEventListener("input", () => {
-        const newSize = slider.value;
-        root.style.fontSize = newSize + "px";
-        localStorage.setItem("base-font", newSize);
-    });
-});
