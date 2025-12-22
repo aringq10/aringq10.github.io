@@ -88,8 +88,12 @@ nav {
             padding: 20px 0;
             display: flex;
         }
+        > * {
+            width: 100%;
+        }
         > #font-slider {
             width: 60%;
+            margin: 20px 0;
         }
         transition: all var(--navbar-popout-speed) ease;
     }

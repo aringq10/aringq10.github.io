@@ -18,9 +18,11 @@
 @import "iframe_wrapper";
 @import "socials";
 
-* {
+*:not(ul, li) {
     margin: 0;
     padding: 0;
+}
+* {
     box-sizing: border-box;
     font-family: var(--text-font);
     transition: background-color var(--theme-toggle-speed) ease, color var(--theme-toggle-speed) ease;
@@ -62,14 +64,10 @@ html, body {
 }
 main {
     width: 100%;
-    padding: 25px var(--side-padding);
+    padding: var(--vertical-padding) var(--side-padding);
     flex: 1;
     display: flex;
     flex-direction: column;
-}
-// Nudge posts down a bit
-body.post main {
-    padding-top: 10%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -87,4 +85,7 @@ a {
 p {
     font-size: var(--small-font);
     hyphens: auto;
+}
+ol {
+    list-style-position: inside;
 }
