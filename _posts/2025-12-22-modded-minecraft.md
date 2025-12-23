@@ -7,6 +7,21 @@ Minecraft **1.21.1**
 NeoForge **21.1.215**
 <br>
 <br>
+
+<a href="{{ '/assets/mc/manifest.json' | relative_url }}" target="blank">
+  manifest.json
+</a>
+<br>
+<a href="{{ '/assets/mc/modlist.html' | relative_url }}" target="blank">
+  modlist.html
+</a>
+<br>
+<a href="{{ '/assets/mc/neofordziuk.zip' | relative_url }}" target="blank">
+  modpack .zip file
+</a>
+<br>
+<br>
+
 1. [WorldGen](#worldgen)
 1. [New Items](#new-items)
 1. [New Mobs](#new-mobs)
@@ -44,6 +59,8 @@ Uses vanilla blocks
 ### New Items
 - Macaw's Bridges
 - Farmer's Delight
+- Supplementaries
+- Amendments
 
 ### New Mobs
 - [Let's Do] WilderNature
@@ -63,6 +80,7 @@ Uses vanilla blocks
 - Dynamic Lights
 - Enchantment Descriptions
 - Fusion (Connected Textures)
+- Just Zoom
 
 ### Performance
 - Sodium (C)
@@ -83,3 +101,5 @@ Uses vanilla blocks
 - Balm (Waystones)
 - Lithostitched (Tectonic)
 - Architectury, Curios API ([Let's Do] WilderNature)
+- Konkrete (Just Zoom)
+- Moonlight Lib (Supplementaries, Amendments)
