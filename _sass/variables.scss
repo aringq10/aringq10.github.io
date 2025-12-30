@@ -8,11 +8,13 @@
     --side-padding: 30px;
     --vertical-padding: 35px;
     --content-width: 1000px;
+    --btt-btn-size: 50px;
 
     // navbar
     --navbar-height: calc(var(--nav-height) + var(--sub-nav-height));
-    --nav-height: 70px;
-    --sub-nav-height: 30px;
+    --nav-height: 75px;
+    --sub-nav-height: 0px;
+    --nav-icon-size: calc(var(--nav-height) / 3);
     --navbar-popout-speed: 0.25s;
     --nav-curr-color: var(--primary-color);
 

@@ -79,23 +79,21 @@
     display: none;
 }
 #dropdown-icon {
-    width: 64px;
-    height: 64px;
     fill: var(--text-color);
     transform: rotate(-90deg);
     transition: transform var(--navbar-popout-speed) ease;
 }
 #light-icon {
-    width: 32px;
-    height: 32px;
     fill: var(--lm-icon-color);
     display: var(--lm-icon-display);
 }
 #dark-icon {
-    width: 32px;
-    height: 32px;
     fill: var(--dm-icon-color);
     display: var(--dm-icon-display);
+}
+#dark-icon, #light-icon, #dropdown-icon {
+    width: var(--nav-icon-size);
+    height: var(--nav-icon-size);
 }
 
 @media (max-width: $mobile-breakpoint) {

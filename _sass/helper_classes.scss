@@ -11,6 +11,13 @@
     -moz-user-select: none;    /* Firefox */
     -ms-user-select: none;     /* IE/Edge */
 }
+.no-highlight {
+  -webkit-tap-highlight-color: transparent; /* mobile tap flash */
+  -webkit-touch-callout: none;              /* iOS long-press menu */
+}
 .mobile {
+    display: none;
+}
+.hidden {
     display: none;
 }
