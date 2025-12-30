@@ -2,7 +2,6 @@
   <div id="nav">
     <div id="nav-inner">
       <div id="nav-dropdown-toggle">
-        <!--<div class="svg-import" data-file="dropdown-icon.svg" svg-id="dropdown-icon"></div>-->
         {% include icons/dropdown.svg %}
       </div>
       <div id="nav-links" class="no-scrollbar">
@@ -17,9 +16,7 @@
       </div>
 
       <div id="theme-toggle">
-        <!--<div class="svg-import" data-file="dark-mode.svg" svg-id="dark-icon"></div>-->
         {% include icons/dark-mode.svg %}
-        <!--<div class="svg-import" data-file="light-mode.svg" svg-id="light-icon"></div>-->
         {% include icons/light-mode.svg %}
       </div>
     </div>
@@ -29,7 +26,7 @@
       {% if page.layout == "post" %}
       <a href="/blog">Back to blog</a>
       {% endif %}
-      <a href="#content-wrapper">
+      <a id="back-to-top">
         Back to top
       </a>
     </div>

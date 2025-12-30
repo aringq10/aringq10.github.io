@@ -6,6 +6,10 @@ email: "aringas.benas.civilka@gmail.com"
 
 permalink: pretty
 
+collections:
+  projects:
+    output: true
+
 defaults:
   - scope:
       path: ""

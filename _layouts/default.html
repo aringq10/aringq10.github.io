@@ -2,13 +2,13 @@
 <html>
   <head>
     <style>
-      :root {
-        --base-font: 20px;
-      }
+    :root {
+      --base-font: 20px;
+    }
     </style>
     {% include header.html %}
     {% if layout.custom_style %}
-      <link rel="stylesheet" href="{{ layout.custom_style | relative_url }}">
+    <link rel="stylesheet" href="{{ layout.custom_style | relative_url }}">
     {% endif %}
     <title>{{ page.title }}</title>
   </head>
@@ -23,15 +23,19 @@
     </div>
   </body>
   <script>
-      document.getElementById('theme-toggle').addEventListener('click', function () {
-          const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-          document.documentElement.setAttribute('data-theme', newTheme);
-          localStorage.setItem('theme', newTheme);
-      });
-      document.getElementById('nav-dropdown-toggle').addEventListener('click', function () {
-          document.getElementById('nav-links').classList.toggle('open');
-          document.getElementById('dropdown-icon').classList.toggle('rotated');
-          document.getElementById('content-window').classList.toggle('no-scroll');
-      });
+  const contentWindow = document.getElementById('content-window');
+  document.getElementById('theme-toggle').addEventListener('click', function () {
+    const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+  document.getElementById('nav-dropdown-toggle').addEventListener('click', function () {
+    document.getElementById('nav-links').classList.toggle('open');
+    document.getElementById('dropdown-icon').classList.toggle('rotated');
+    contentWindow.classList.toggle('no-scroll');
+  });
+  document.getElementById('back-to-top').addEventListener('click', function () {
+    contentWindow.scrollTo({ top: 0, behavior: 'smooth' });;
+  });
   </script>
 </html>

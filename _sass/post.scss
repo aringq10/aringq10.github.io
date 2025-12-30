@@ -1,5 +1,5 @@
 body.post main div#content{
-    *:not(h1, h2, h3, h4, h5, h6){
+    *:not(h1, h2, h3, h4, h5, h6, td){
         font-size: var(--small-font);
     }
     a {

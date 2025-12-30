@@ -59,36 +59,6 @@ function copyHandle() {
     });
 };
 
-// Function to import all SVGs
-function importSVGs() {
-    const elements = document.querySelectorAll('.svg-import');
-    const pathPrefix = "/assets/svg/";
-
-    elements.forEach(el => {
-        let path = el.getAttribute('data-file');
-        if (!path) return;
-        path = pathPrefix + path;
-
-        fetch(path)
-            .then(response => {
-                if (!response.ok) throw new Error(`Failed to load ${path}`);
-                return response.text();
-            })
-            .then(svgText => {
-                el.insertAdjacentHTML('afterend', svgText);
-
-                // Optional: copy SVG attributes like width/height from parent div
-                const svgEl = el.nextElementSibling;
-                if (svgEl) {
-                    svgEl.setAttribute('id', el.getAttribute('svg-id') || '');
-                }
-                el.remove();
-            })
-            .catch(err => console.error(err));
-    });
-}
-
 // Run the function after DOM is ready
-document.addEventListener('DOMContentLoaded', importSVGs);
 document.addEventListener('DOMContentLoaded', copyHandle);
 

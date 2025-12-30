@@ -1,0 +1,19 @@
+details.my-dropdown {
+    summary { list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    > summary {
+        display: flex;
+        // align-items: flex-start;
+        cursor: pointer;
+    }
+
+    > summary::before {
+        content: "▸";
+        flex: 0 0 1em;
+    }
+
+    &[open] > summary::before {
+        content: "▾";
+    }
+}
+
