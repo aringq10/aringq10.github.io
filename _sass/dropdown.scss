@@ -15,5 +15,9 @@ details.my-dropdown {
     &[open] > summary::before {
         content: "▾";
     }
+
+    > #dd-body {
+        padding-left: 1em;
+    }
 }
 
