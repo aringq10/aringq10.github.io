@@ -39,7 +39,7 @@ Supplementing my studies with [teachyourself.cs](https://teachyourselfcs.com){:t
         </tr>
         <tr>
           <td>Ch. 3(122p)<br><br><hr class="mobile"></td>
-          <td>Dec 4 - Dec 11<br>(7.5h/12h)<br>(6/8)<br>(1.9 1.3 1.4 0 2.8 0 1.4 3.3)</td>
+          <td>Dec 4 - Dec 11<br>(5.8h/12h)<br>(6/8)<br>(1.9 1.3 1.4 0 2.8 0 1.4 3.3)</td>
         </tr>
         <tr>
           <td>Ch. 4(74p)<br><br><hr class="mobile"></td>
