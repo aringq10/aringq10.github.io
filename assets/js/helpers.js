@@ -59,6 +59,19 @@ function copyHandle() {
     });
 };
 
+const filter = (q, sel) =>
+    document.querySelectorAll(sel).forEach(el =>
+        el.hidden = !el.getAttribute('data-match').toLowerCase().includes(q.toLowerCase())
+    );
+
+function loadSearchbars() {
+    document.querySelectorAll('.searchbar').forEach(inp => {
+        inp.oninput = e => filter(e.target.value, inp.getAttribute('data-selector'))
+        inp.placeholder = "Search..."
+    });
+}
+
 // Run the function after DOM is ready
 document.addEventListener('DOMContentLoaded', copyHandle);
+document.addEventListener('DOMContentLoaded', loadSearchbars);
 

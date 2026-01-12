@@ -10,6 +10,11 @@
     {% if layout.custom_style %}
     <link rel="stylesheet" href="{{ layout.custom_style | relative_url }}">
     {% endif %}
+    {% if page.custom_inline_style %}
+    <style>
+    {{ page.custom_inline_style }}
+    </style>
+    {% endif %}
     <title>{{ page.title }}</title>
   </head>
   <body class="{{ page.layout }}">

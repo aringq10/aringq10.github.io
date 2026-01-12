@@ -94,6 +94,18 @@ p {
 ol {
     list-style-position: inside;
 }
+input {
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    border: var(--table-border);
+    outline: none;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+hr {
+    border: 0;
+    border-top: var(--table-border);
+}
 
 @import "helper_classes";
 @import "navigation";
