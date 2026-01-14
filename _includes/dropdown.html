@@ -1,0 +1,28 @@
+{% comment %}
+
+params:
+  summary - dropdown description
+  body    - the contents
+
+{% endcomment %}
+
+<details class="my-dropdown">
+  <summary>
+    <div>
+      {% assign s = include.summary | default: "" | newline_to_br %}
+      {% assign s = s | replace: "<br>", "<br />" %}
+      {% assign lines = s | split: "<br />" %}
+
+      {% for line in lines %}
+        {% assign trimmed = line | strip %}
+        {% if trimmed != "" %}
+          <p>{{ trimmed }}</p>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </summary>
+  <br>
+  <div class="dd-body">
+    {{ include.body }}
+  </div>
+</details>

@@ -1,0 +1,79 @@
+- title: WorldGen
+  ss:
+    - title: Adds new blocks
+      list:
+        - Biomes O' Plenty
+        - Yung's Cave Biomes (New items, mobs)
+    - title: Uses vanilla blocks
+      list:
+        - Yung's Better Caves
+        - Yung's Better Desert Temples
+        - Yung's Better Dungeons
+        - Yung's Better End Island
+        - Yung's Better Jungle Temples
+        - Yung's Better Mineshafts
+        - Yung's Better Nether Fortresses
+        - Yung's Better Ocean Monuments
+        - Yung's Better Strongholds
+        - Yung's Better Witch Huts
+        - Yung's Bridges
+        - Yung's Extras
+        - Terralith
+        - Tectonic
+        - Dungeons and Taverns
+        - Farmers Structures (requires Farmer's Delight)
+
+- title: New Items
+  list:
+    - Macaw's Bridges
+    - Farmer's Delight
+    - Supplementaries
+    - Amendments
+
+- title: New Mobs
+  list:
+    - "[Let's Do] WilderNature"
+
+- title: QoL
+  list:
+    - Waystones
+    - Sophisticated Backpacks
+    - Gravestone
+
+- title: Server-side
+  list:
+    - Simple Backups
+
+- title: Client-side
+  list:
+    - JourneyMap
+    - JEI
+    - Distant Horizons
+    - Dynamic Lights
+    - Enchantment Descriptions
+    - Fusion (Connected Textures)
+    - Just Zoom
+
+- title: Performance
+  list:
+    - Sodium (C)
+    - Iris (C)
+    - ImmediatelyFast (C)
+    - Entity Culling (C)
+    - Clumps (C)
+    - Dynamic FPS (C)
+    - Lithium (CS)
+    - FerriteCore (CS)
+
+- title: APIs
+  list:
+    - Yung's API
+    - GeckoLib (Yung's Cave Biomes)
+    - Terrablender, GlithCore (Biomes O' Plenty)
+    - Sophisticated Core (Sophisticated Backpacks)
+    - Bookshelf, Prickle (Enchantment Descriptions)
+    - Balm (Waystones)
+    - Lithostitched (Tectonic)
+    - Architectury, Curios API ([Let's Do] WilderNature)
+    - Konkrete (Just Zoom)
+    - Moonlight Lib (Supplementaries, Amendments)

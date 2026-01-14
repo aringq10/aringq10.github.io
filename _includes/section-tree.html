@@ -1,0 +1,63 @@
+{% comment %}
+
+params:
+  level: level of <hN> tag to use at the root
+  prefix: any prefix for all section IDs
+
+The passed yml list can have a `title` attribute and a `list`
+with all the items. Optionally, subsections can be nested
+inside a list via `ss`, which should be a list of `title`,
+`list` pairs.
+
+For example:
+- title: WorldGen
+  ss:
+    - title: Adds new blocks
+      list:
+        - Biomes O' Plenty
+        - Yung's Cave Biomes (New items, mobs)
+      ss:
+        - title: Something New
+          list:
+            - New item
+    - title: Uses vanilla blocks
+      list:
+        - Yung's Better Caves
+
+{% endcomment %}
+
+{%- assign node  = include.node -%}
+{%- assign max_level = 4 -%}
+{%- assign level = include.level | default: 3 | plus: 0 -%}
+
+{%- if level > max_level -%}{%- assign level = max_level -%}{%- endif -%}
+
+{%- assign slug = node.title | slugify -%}
+{%- if include.prefix and include.prefix != "" -%}
+  {%- assign full_id = include.prefix | append: "-" | append: slug -%}
+{%- else -%}
+  {%- assign full_id = slug -%}
+{%- endif -%}
+
+<h{{ level }} id="{{ full_id }}">{{ node.title }}</h{{ level }}>
+
+{%- if node.list and node.list != empty -%}
+  <ul>
+    {%- for item in node.list -%}
+      <li>{{ item | newline_to_br }}</li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
+
+{%- if node.ss and node.ss != empty -%}
+  {%- assign next_level = level | plus: 1 -%}
+  {%- if next_level > max_level -%}{%- assign next_level = max_level -%}{%- endif -%}
+
+  <ul>
+    {%- for child in node.ss -%}
+      <li>
+        {% include section-tree.html node=child level=next_level prefix=full_id %}
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}

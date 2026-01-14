@@ -1,0 +1,24 @@
+<details class="my-dropdown">
+  <summary>
+    <div>
+      {% assign s = include.summary | default: "" | newline_to_br %}
+      {% assign s = s | replace: "<br>", "<br />" %}
+      {% assign lines = s | split: "<br />" %}
+
+      {% for line in lines %}
+        {% assign trimmed = line | strip %}
+        {% if trimmed != "" %}
+          <p>{{ trimmed }}</p>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </summary>
+
+  <div class="dd-body">
+    <ul>
+      {% for item in include.items %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</details>

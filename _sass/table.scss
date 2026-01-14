@@ -1,6 +1,7 @@
 table.my-table {
     width: 100%;
     border-collapse: collapse;
+    border: var(--table-border);
     td, th {
         padding: 10px;
         // border: 0.5px solid var(--text-color);

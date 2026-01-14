@@ -15,16 +15,19 @@ Supplementing my studies with [teachyourself.cs](https://teachyourselfcs.com){:t
   <div id="dd-body">
     <br>
     <p>
-      <a href="https://gaia.cs.umass.edu/kurose_ross/index.php" target="blank">
-        Authors' Website
-      </a>
+      {% include link.html
+        link="https://gaia.cs.umass.edu/kurose_ross/index.php" target="blank"
+        text="Authors' Website"
+      %}
     </p>
     <p>
-      <a href="https://media.pearsoncmg.com/ph/esm/ecs_kurose_compnetwork_8/cw/" target="blank">
-        Student Resources
-      </a>
+      {% include link.html
+        link="https://media.pearsoncmg.com/ph/esm/ecs_kurose_compnetwork_8/cw/" target="blank"
+        text="Student Resources"
+      %}
     </p>
     <br>
+    {% capture custom-table %}
     <table class="my-table">
       <thead>
         <tr>
@@ -47,10 +50,33 @@ Supplementing my studies with [teachyourself.cs](https://teachyourselfcs.com){:t
         </tr>
         <tr>
           <td>Ch. 5(72p)<br><br><hr class="mobile"></td>
-          <td>Dec 22 - Dec 30<br>(8.6h/13.6h)<br>(6/9)<br>(0.8 0.8 1.8 0 0 0 2.1 2.1 6)</td>
+          <td>
+            Dec 22 - Dec 30<br>(8.6h/13.6h)<br>(6/9)<br>(0.8 0.8 1.8 0 0 0 2.1 2.1 6)<br><br>
+            <i><p>
+              * Homework problems were:
+              {% include link.html
+              link="https://github.com/aringq10/uni-hw/tree/main/onmyown/comp-netw/programming-assigments/dv-routing"
+              text="distance-vector routing simulator"
+              %}
+              and
+              {% include link.html
+                link="https://github.com/aringq10/uni-hw/tree/main/onmyown/comp-netw/programming-assigments/icmp"
+                text="recreating the ping command"
+              %}
+            </p></i>
+          </td>
+        </tr>
+        <tr>
+          <td>Ch. 6(82p)<br><br><hr class="mobile"></td>
+          <td>
+            Jan 8 - Jan 14<br>(1.8h/6h)<br>(6/9)<br>(0.8 1.4 1.4 0.5 0 0.4 1.4)<br><br>
+            <i><p>* Skipped all of the calculation problems with probability and stuff, may come back to them later, but didn't seem very interesting.</p></i>
+          </td>
         </tr>
       </tbody>
     </table>
+    {% endcapture %}
+    {% include dropdown.html summary="Progress" body=custom-table %}
   </div>
 </details>
 <br>
@@ -64,9 +90,10 @@ Supplementing my studies with [teachyourself.cs](https://teachyourselfcs.com){:t
   <div id="dd-body">
     <br>
     <p>
-      <a href="https://sarabander.github.io/sicp/html/index.xhtml" target="blank">
-        Link to a free web version
-      </a>
+      {% include link.html
+        link="https://sarabander.github.io/sicp/html/index.xhtml" target="blank"
+        text="Link to a free web version"
+      %}
     </p>
     <br>
     <b>TBD</b>
@@ -83,9 +110,10 @@ Supplementing my studies with [teachyourself.cs](https://teachyourselfcs.com){:t
   <div id="dd-body">
     <br>
     <p>
-      <a href="https://csapp.cs.cmu.edu/3e/home.html" target="blank">
-        Home website
-      </a>
+      {% include link.html
+        link="https://csapp.cs.cmu.edu/3e/home.html" target="blank"
+        text="Home website"
+      %}
     </p>
     <br>
     <b>TBD</b>

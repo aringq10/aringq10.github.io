@@ -48,6 +48,9 @@
 
   backToTopBtn.addEventListener('click', function () {
     contentWindow.scrollTo({ top: 0, behavior: 'smooth' });;
+    if (location.hash) {
+      history.replaceState(null, "", location.href.replace(location.hash, ""));
+    }
   });
   function update() {
     backToTopBtn.classList.toggle('hidden', contentWindow.scrollTop < 200);
