@@ -63,6 +63,10 @@ Supplementing my studies with [teachyourself.cs](https://teachyourselfcs.com){:t
                 link="https://github.com/aringq10/uni-hw/tree/main/onmyown/comp-netw/programming-assigments/icmp"
                 text="recreating the ping command"
               %}
+              .
+              The ping program was surprisingly easy to implement and it was cool to see it work almost the same as the
+              original one. Distance vector alg is straightforward in theory but this simulator took quite some time to
+              implement and figuring out the author's simulator code was very satisfying :).
             </p></i>
           </td>
         </tr>
