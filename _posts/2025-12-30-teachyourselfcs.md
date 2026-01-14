@@ -73,7 +73,7 @@ Supplementing my studies with [teachyourself.cs](https://teachyourselfcs.com){:t
         <tr>
           <td>Ch. 6(82p)<br><br><hr class="mobile"></td>
           <td>
-            Jan 8 - Jan 14<br>(1.8h/6h)<br>(6/9)<br>(0.8 1.4 1.4 0.5 0 0.4 1.4)<br><br>
+            Jan 8 - Jan 14<br>(1.8h/6h)<br>(6/7)<br>(0.8 1.4 1.4 0.5 0 0.4 1.4)<br><br>
             <i><p>* Skipped all of the calculation problems with probability and stuff, may come back to them later, but didn't seem very interesting.</p></i>
           </td>
         </tr>
