@@ -1,0 +1,73 @@
+---
+excerpt: Teaching myself Computer Science
+---
+
+<p>
+  Supplementing my studies with
+  {% include link.html
+    link="https://teachyourselfcs.com"
+    text="teachyourselfcs"
+  %}
+</p>
+
+<br>
+
+{% for topic in site.data.posts.teachyourselfcs %}
+  {% capture tmp-body %}
+    {% for item in topic.preface-links %}
+      {% include link.html link=item.link text=item.text %}
+      <br>
+    {% endfor %}
+    {% if topic.preface %}
+      <br>
+      {{ topic.preface | markdownify | newline_to_br }}
+    {% else %}
+      <br>
+    {% endif %}
+
+    {% capture progress-table %}
+      <table class="my-table">
+        <tr>
+          {% for h in topic.progress.header %}
+            <th>
+              {{ h | markdownify | newline_to_br }}
+              {% unless forloop.last %}
+                <hr class="mobile">
+              {% endunless %}
+            </th>
+          {% endfor %}
+        </tr>
+        {% for r in topic.progress.rows %}
+          <tr>
+            <td>{{ r.title | markdownify | newline_to_br }}<hr class="mobile"></td>
+            <td>
+              {{ r.data | markdownify | newline_to_br }}
+              {% if r.comment %}
+                <i>
+                  {{ r.comment | markdownify }}
+                </i>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    {% endcapture %}
+    {% assign progress-title = "Progress<br>"
+      | append: topic.progress.title
+      | markdownify
+      | newline_to_br
+    %}
+    {% include dropdown.html
+      summary=progress-title
+      body=progress-table
+    %}
+  {% endcapture %}
+
+  {% assign final-title = topic.title | markdownify | newline_to_br %}
+  {% include dropdown.html
+    summary=final-title
+    body=tmp-body
+  %}
+  <br>
+{% endfor %}
+

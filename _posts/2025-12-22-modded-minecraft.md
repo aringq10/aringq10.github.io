@@ -8,18 +8,20 @@ NeoForge **21.1.215**
 <br>
 <br>
 
-<a href="{{ '/assets/mc/manifest.json' | relative_url }}" target="blank">
-  manifest.json
-</a>
-<br>
-<a href="{{ '/assets/mc/modlist.html' | relative_url }}" target="blank">
-  modlist.html
-</a>
-<br>
-<a href="{{ '/assets/mc/neofordziuk.zip' | relative_url }}" target="blank">
-  modpack .zip file
-</a>
-<br>
+<div id="modpack-links">
+  <a href="{{ '/assets/mc/manifest.json' | relative_url }}" target="blank">
+    manifest.json
+  </a>
+  <br>
+  <a href="{{ '/assets/mc/modlist.html' | relative_url }}" target="blank">
+    modlist.html
+  </a>
+  <br>
+  <a href="{{ '/assets/mc/neofordziuk.zip' | relative_url }}" target="blank">
+    modpack .zip file
+  </a>
+</div>
+
 <br>
 
 <ol>

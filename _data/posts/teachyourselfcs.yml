@@ -1,0 +1,81 @@
+- title: |
+    **Computer Networking: A Top-Down Approach**
+    By *Jim Kurose* and *Keith Ross*
+  preface-links:
+    - link: "https://gaia.cs.umass.edu/kurose_ross/index.php"
+      text: "Authors' Website"
+    - link: "https://media.pearsoncmg.com/ph/esm/ecs_kurose_compnetwork_8/cw/"
+      text: "Student Resources"
+  progress:
+    title: |
+      2025-2026
+    header:
+      - Chapter(pages)
+      - |
+        Started - Finished
+        (Time-spent-excl-hw/Total-time)
+        (Days-studied/Total-days)
+        (Daily-time)
+    rows:
+      - title: Ch. 1 & 2(180p)
+        data: |
+          NaN - Dec 3
+          (?)
+          (?)
+          (?)
+      - title: Ch. 3(122p)
+        data: |
+          Dec 4 - Dec 11
+          (7.5h/12h)
+          (6/8)
+          (1.9 1.3 1.4 0 2.8 0 1.4 3.3)
+      - title: Ch. 4(74p)
+        data: |
+          Dec 18 - Dec 21
+          (3h/7.2h)
+          (4/4)
+          (1.2 0.8 2.3 3)
+      - title: Ch. 5(72p)
+        data: |
+          Dec 22 - Dec 30
+          (8.6h/13.6h)
+          (6/9)
+          (0.8 0.8 1.8 0 0 0 2.1 2.1 6)
+        comment: |
+          \* Homework problems were:
+          [distance-vector routing simulator][dv]{:target="_blank" rel="noopener"}
+          and [recreating the ping command][ping]{:target="_blank" rel="noopener"}.
+          The ping program was surprisingly easy to implement and it was cool to see it work almost the same as the
+          original one. Distance vector alg is straightforward in theory but this simulator took quite some time to
+          implement and figuring out the author's simulator code was very satisfying :).
+
+          [dv]:https://github.com/aringq10/uni-hw/tree/main/onmyown/comp-netw/programming-assigments/dv-routing
+          [ping]:https://github.com/aringq10/uni-hw/tree/main/onmyown/comp-netw/programming-assigments/icmp
+      - title: Ch. 6(82p)
+        data: |
+          Jan 8 - Jan 14
+          (1.8h/6h)
+          (6/7)
+          (0.8 1.4 1.4 0.5 0 0.4 1.4)
+        comment: |
+          \* Skipped all of the calculation problems with probability and stuff, may come back to them later, but
+          didn't seem very interesting.
+
+- title: |
+    **Structure and Interpretation of Computer Programs**
+    By *Harold Abelson* and *Gerald Jay Sussman* with *Julie Sussmane*
+  preface-links:
+    - link: "https://sarabander.github.io/sicp/html/index.xhtml"
+      text: "Link to a free web version"
+  preface: |
+    TBD
+
+- title: |
+    **Computer Systems: A Programmer's Perspective**
+    By *Randal E. Bryant* and *David R. O'Hallaron*
+  preface-links:
+    - link: "https://csapp.cs.cmu.edu/3e/home.html"
+      text: "Home website"
+  preface: |
+    TBD
+
