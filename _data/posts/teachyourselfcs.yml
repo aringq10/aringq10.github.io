@@ -60,6 +60,12 @@
         comment: |
           \* Skipped all of the calculation problems with probability and stuff, may come back to them later, but
           didn't seem very interesting.
+      - title: Ch. 7(76p)
+        data: |
+          Jan 16 - Jan 29
+          (4.5h/6.4h)
+          (5/14)
+          (0.7 0x3 0.9 0x4 0.6 2.3 0x2 1.9)
 
 - title: |
     **Structure and Interpretation of Computer Programs**
