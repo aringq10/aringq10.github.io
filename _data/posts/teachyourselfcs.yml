@@ -66,6 +66,16 @@
           (4.5h/6.4h)
           (5/14)
           (0.7 0x3 0.9 0x4 0.6 2.3 0x2 1.9)
+      - title: Ch. 8(84p)
+        data: |
+          Jan 31 - Feb 4
+          (4.6h/7.5h)
+          (5/5)
+          (1.7 2.1 0.8 1.9 1)
+      - title: TOTAL 3-8(510p)
+        data: |
+          (33.6h/52.9h)
+          (32/47)
 
 - title: |
     **Structure and Interpretation of Computer Programs**
