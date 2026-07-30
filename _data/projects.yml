@@ -9,3 +9,15 @@
 - title: TCP - The Chess Project
   desc: A networked chess game client in C++ and remote server in Go.
   link: "https://github.com/aringq10/TCP"
+
+- title: Eneba Search Page
+  desc: A mock Eneba search page - React frontend, Express + SQLite backend with fuzzy search via spellfix.
+  link: "https://github.com/aringq10/eneba-search-page"
+
+- title: 8086 disassembler
+  desc: A disassembler for 8086 .COM and .EXE files, fully written in 8086 assembly.
+  link: https://github.com/aringq10/8086-disasm
+
+- title: Ping
+  desc: A messenger app with accounts and instant messaging - Flask, SQLite and flask-socketio. My final project for CS50x.
+  link: https://github.com/aringq10/Ping

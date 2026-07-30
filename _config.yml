@@ -33,7 +33,7 @@ plugins:
 # jekyll-paginate drives /posts/. It supports exactly one paginated page, and
 # that page must be named index.html and live in the directory named by
 # paginate_path (here: posts/index.html).
-paginate: 3
+paginate: 10
 paginate_path: "/posts/page:num/"
 
 permalink: pretty
