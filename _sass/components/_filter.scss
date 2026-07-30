@@ -1,0 +1,51 @@
+@use "../variables" as *;
+
+.filter {
+  margin-bottom: $space-lg;
+}
+
+// Hidden visually but kept in the accessibility tree — a placeholder isn't a
+// reliable accessible name.
+.filter__label {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.filter__input {
+  background: var(--bg-surface);
+  border: $border-width solid var(--border);
+  border-radius: $radius;
+  color: var(--text);
+  font: inherit;
+  font-size: $font-size-sm;
+  padding: $space-sm * 0.75 $space-sm;
+  transition: border-color $transition;
+  width: 100%;
+
+  &::placeholder {
+    color: var(--text-muted);
+  }
+
+  &:hover {
+    border-color: var(--text-muted);
+  }
+
+  &:focus {
+    border-color: var(--focus);
+  }
+}
+
+.filter__empty {
+  color: var(--text-muted);
+  font-size: $font-size-sm;
+}
+
+// Filtering hides rows via the `hidden` attribute, which any author `display` on
+// the row would silently beat. Pinned here so adding one can't break the filter.
+.entry-list__item[hidden] {
+  display: none;
+}

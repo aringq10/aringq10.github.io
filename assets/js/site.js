@@ -65,4 +65,48 @@
       );
     });
   }
+
+  // Entry list filter -----------------------------------------------------
+  var filter = document.querySelector("[data-filter]");
+  var filterList = document.querySelector("[data-filter-list]");
+  var input = filter && filter.querySelector(".filter__input");
+  var rows = filterList
+    ? filterList.querySelectorAll(".entry-list__item")
+    : [];
+
+  if (input && rows.length) {
+    var empty = document.querySelector("[data-filter-empty]");
+
+    var normalize = function (text) {
+      return text.toLowerCase().replace(/\s+/g, " ").trim();
+    };
+
+    var haystacks = [];
+    for (var r = 0; r < rows.length; r++) {
+      haystacks.push(normalize(rows[r].textContent));
+    }
+
+    filter.hidden = false;
+
+    var applyFilter = function () {
+      var query = normalize(input.value);
+      var shown = 0;
+
+      for (var j = 0; j < rows.length; j++) {
+        var hit = query === "" || haystacks[j].indexOf(query) !== -1;
+        rows[j].hidden = !hit;
+        if (hit) {
+          shown++;
+        }
+      }
+
+      if (empty) {
+        empty.hidden = shown !== 0;
+      }
+    };
+
+    input.addEventListener("input", applyFilter);
+
+    applyFilter();
+  }
 })();
