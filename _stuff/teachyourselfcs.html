@@ -1,4 +1,5 @@
 ---
+title: Teachyourselfcs
 excerpt: Teaching myself Computer Science
 ---
 
@@ -12,7 +13,7 @@ excerpt: Teaching myself Computer Science
 
 <br>
 
-{% for topic in site.data.posts.teachyourselfcs %}
+{% for topic in site.data.stuff.teachyourselfcs %}
   {% capture tmp-body %}
     {% for item in topic.preface-links %}
       {% include link.html link=item.link text=item.text %}

@@ -1,4 +1,5 @@
 ---
+title: Modded Minecraft
 excerpt: Modlist for personal MC world.
 ---
 
@@ -25,7 +26,7 @@ NeoForge **21.1.215**
 <br>
 
 <ol>
-  {% for section in site.data.posts.mc-modlist %}
+  {% for section in site.data.stuff.mc-modlist %}
     <li>
       <a href="#{{ section.title | slugify }}">{{ section.title }}</a>
     </li>
@@ -35,6 +36,6 @@ NeoForge **21.1.215**
 <br>
 <br>
 
-{% for section in site.data.posts.mc-modlist %}
+{% for section in site.data.stuff.mc-modlist %}
   {% include section-tree.html node=section level=3 %}
 {% endfor %}

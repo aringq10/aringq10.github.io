@@ -1,0 +1,23 @@
+---
+layout: page
+title: Stuff
+nav_order: 2
+---
+
+{%- assign entries = site.stuff | sort_natural: "title" -%}
+
+<ul class="entry-list">
+  {%- for item in entries %}
+  {%- assign excerpt = item.excerpt | strip_html | normalize_whitespace | strip | truncate: 160 %}
+  <li class="entry-list__item">
+    <div class="entry-list__row">
+      <a class="entry-list__link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+    </div>
+    {%- if excerpt != "" %}
+    <p class="entry-list__desc" title="{{ excerpt }}">{{ excerpt }}</p>
+    {%- endif %}
+  </li>
+  {%- else %}
+  <li class="entry-list__item entry-list__item--empty">Nothing here yet.</li>
+  {%- endfor %}
+</ul>

@@ -27,28 +27,23 @@ socials:
     icon: email
     url: "mailto:aringas.benas.civilka@gmail.com"
 
-plugins:
-  - jekyll-paginate
-
-# jekyll-paginate drives /posts/. It supports exactly one paginated page, and
-# that page must be named index.html and live in the directory named by
-# paginate_path (here: posts/index.html).
-paginate: 10
-paginate_path: "/posts/page:num/"
-
-permalink: pretty
+collections:
+  stuff:
+    output: true
+    permalink: /stuff/:title/
 
 sass:
   style: expanded
   sourcemap: never
 
+permalink: pretty
+
 defaults:
   - scope:
       path: ""
-      type: "posts"
+      type: "stuff"
     values:
-      layout: "post"
-      permalink: /posts/:title/
+      layout: "stuff"
   - scope:
       path: ""
       type: "pages"

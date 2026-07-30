@@ -1,4 +1,5 @@
 ---
+title: Good Apps
 excerpt: Some good, free and useful apps.
 ---
 

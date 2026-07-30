@@ -1,9 +1,5 @@
 {%- comment -%}
   Nav links are every page with `layout: page`, ordered by `nav_order` then title.
-
-  jekyll-paginate clones the paginated index page once per page of results
-  (/posts/page2/, ...), and the clones keep the original front matter. Deduping
-  on `path` keeps one nav entry per source file.
 {%- endcomment -%}
 {%- assign nav_pages = site.pages | where: "layout", "page" | sort: "title" | sort: "nav_order" -%}
 
@@ -30,17 +26,14 @@
   <div class="sidebar__panel" id="sidebar-panel">
     <nav class="sidebar__nav" aria-label="Main">
       <ul class="nav">
-        {%- assign seen = "" -%}
         {%- for p in nav_pages -%}
-          {%- unless seen contains p.path -%}
-            {%- assign seen = seen | append: p.path | append: "|" -%}
-            {%- assign is_current = false -%}
-            {%- if page.url == p.url -%}
-              {%- assign is_current = true -%}
-            {%- elsif p.url != "/" and page.url contains p.url -%}
-              {%- comment -%} keeps /posts/ active on /posts/page2/ {%- endcomment -%}
-              {%- assign is_current = true -%}
-            {%- endif -%}
+          {%- assign is_current = false -%}
+          {%- if page.url == p.url -%}
+            {%- assign is_current = true -%}
+          {%- elsif p.url != "/" and page.url contains p.url -%}
+            {%- comment -%} keeps /stuff/ active on entries like /stuff/c-compiler/ {%- endcomment -%}
+            {%- assign is_current = true -%}
+          {%- endif -%}
         <li class="nav__item">
           <a
             class="nav__link{% if is_current %} nav__link--current{% endif %}"
@@ -48,7 +41,6 @@
             {%- if is_current %} aria-current="page"{% endif %}
           >{{ p.title | default: p.name }}</a>
         </li>
-          {%- endunless -%}
         {%- endfor -%}
       </ul>
     </nav>

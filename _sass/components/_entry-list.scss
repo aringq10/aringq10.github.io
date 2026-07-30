@@ -1,7 +1,7 @@
 @use "../variables" as *;
 
-// Index rows: a title, a right-aligned meta value, and an optional one-line
-// description underneath. Shared by /posts/ and /projects/.
+// Index rows: a title with an optional one-line description underneath.
+// Shared by /stuff/ and /projects/.
 .entry-list {
   list-style: none;
   margin: 0;
@@ -13,7 +13,7 @@
   padding: $space-sm 0;
 }
 
-// Title and meta share a line; the description sits underneath.
+// The description sits underneath the title.
 .entry-list__row {
   align-items: baseline;
   display: flex;
@@ -28,12 +28,6 @@
   &:hover {
     text-decoration: underline;
   }
-}
-
-.entry-list__meta {
-  color: var(--text-muted);
-  font-size: $font-size-sm;
-  font-variant-numeric: tabular-nums;
 }
 
 .entry-list__desc {
