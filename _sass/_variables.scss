@@ -1,0 +1,91 @@
+$breakpoint-mobile: 48rem !default;
+
+// Layout ------------------------------------------------------------------
+$sidebar-width: 16rem !default;
+$content-max-width: 44rem !default;
+$space: 1rem !default;
+$space-sm: $space * 0.5 !default;
+$space-lg: $space * 2 !default;
+$radius: 0.375rem !default;
+$border-width: 1px !default;
+
+// Typography --------------------------------------------------------------
+$font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji" !default;
+$font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !default;
+$font-size-base: 1rem !default;
+$font-size-sm: 0.875rem !default;
+$font-size-xs: 0.8125rem !default;
+$line-height: 1.65 !default;
+$line-height-tight: 1.25 !default;
+
+// Motion ------------------------------------------------------------------
+$transition: 150ms ease !default;
+
+// Themes ------------------------------------------------------------------
+// see _theme.scss
+$theme-light: (
+  bg: #fdfdfc,
+  bg-sidebar: #f4f3f0,
+  bg-surface: #ffffff,
+  bg-hover: #e8e6e0,
+  text: #1b1b1a,
+  text-muted: #6c6b66,
+  text-inverted: #fdfdfc,
+  heading: #101010,
+  link: #1f6f5c,
+  link-hover: #14503f,
+  accent: #1f6f5c,
+  border: #e2e0d9,
+  code-bg: #f1efe9,
+  focus: #1f6f5c
+) !default;
+
+$theme-dark: (
+  bg: #17181b,
+  bg-sidebar: #1e2024,
+  bg-surface: #22242a,
+  bg-hover: #2c2f36,
+  text: #e6e5e1,
+  text-muted: #9b9a94,
+  text-inverted: #17181b,
+  heading: #f5f4f1,
+  link: #6fd3b3,
+  link-hover: #9ce4cd,
+  accent: #6fd3b3,
+  border: #2f3238,
+  code-bg: #22242a,
+  focus: #6fd3b3
+) !default;
+
+// https://github.com/folke/tokyonight.nvim — the "night" variant.
+$theme-tokyonight: (
+  bg: #1a1b26,
+  bg-sidebar: #16161e,
+  bg-surface: #24283b,
+  bg-hover: #292e42,
+  text: #c0caf5,
+  text-muted: #9aa5ce,
+  text-inverted: #1a1b26,
+  heading: #d5dbf5,
+  link: #7aa2f7,
+  link-hover: #7dcfff,
+  accent: #bb9af7,
+  border: #292e42,
+  code-bg: #16161e,
+  focus: #7aa2f7
+) !default;
+
+// Every key here becomes a theme: a [data-theme] block in _theme.scss and an
+// entry in the sidebar picker. Adding one also means adding it to the `themes`
+// list in _config.yml, which is what the picker's labels come from.
+// Keep `light` first — it doubles as the :root fallback.
+$themes: (
+  light: $theme-light,
+  dark: $theme-dark,
+  tokyonight: $theme-tokyonight
+) !default;
+
+// Themes that should get `color-scheme: dark`, so scrollbars and form controls
+// match.
+$dark-themes: (dark, tokyonight) !default;

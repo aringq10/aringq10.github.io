@@ -1,0 +1,45 @@
+@use "../variables" as *;
+
+.socials {
+  list-style: none;
+  margin: 0 0 $space-sm;
+  padding: 0;
+}
+
+// Padding matches .nav__link so icons line up with the nav text above.
+.social {
+  align-items: center;
+  border-radius: $radius;
+  color: var(--text);
+  display: flex;
+  font-size: $font-size-xs;
+  gap: $space-sm * 0.75;
+  padding: $space-sm * 0.6 $space-sm;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--bg-hover);
+    color: var(--link);
+  }
+
+  // currentColor means one asset serves both themes.
+  svg {
+    fill: currentColor;
+    flex: none;
+    height: 1em;
+    width: 1em;
+  }
+}
+
+// One line per social, ellipsised when it doesn't fit — a long address would
+// otherwise wrap to two lines and pull the icon out of alignment.
+//
+// min-width: 0 is required: flex items default to min-width: auto, which stops
+// the span shrinking below its text, so it would overflow instead of clipping.
+// The full value stays reachable via the link's title and href.
+.social__name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

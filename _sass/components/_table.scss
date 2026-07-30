@@ -1,0 +1,33 @@
+@use "../variables" as *;
+
+// Two columns at every width — no stacking on mobile. `table-layout: fixed`
+// splits the width evenly and forces long cell content to wrap instead of
+// widening a column, and `display: table` overrides the scrollable-block
+// default in _base.scss so the table still fills the content column.
+.data-table {
+  border: $border-width solid var(--border);
+  border-collapse: collapse;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+
+  // Full grid. border-collapse merges these with the outer border, so edges
+  // stay a single line thick.
+  th,
+  td {
+    border: $border-width solid var(--border);
+    overflow-wrap: anywhere;
+    padding: $space-sm;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    color: var(--heading);
+    font-size: $font-size-sm;
+  }
+
+  p {
+    margin: 0;
+  }
+}

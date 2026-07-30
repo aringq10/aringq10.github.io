@@ -1,0 +1,125 @@
+@use "variables" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: $font-body;
+  font-size: $font-size-base;
+  line-height: $line-height;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: $space-lg 0 $space-sm;
+  color: var(--heading);
+  line-height: $line-height-tight;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+h2 {
+  font-size: 1.25rem;
+}
+h3 {
+  font-size: 1.05rem;
+}
+
+p,
+ul,
+ol,
+blockquote,
+pre,
+table {
+  margin: 0 0 $space;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+
+  &:hover {
+    color: var(--link-hover);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  border: 0;
+  border-top: $border-width solid var(--border);
+  margin: $space-lg 0;
+}
+
+code,
+pre {
+  font-family: $font-mono;
+  font-size: $font-size-sm;
+}
+
+code {
+  background: var(--code-bg);
+  border-radius: 3px;
+  padding: 0.1em 0.3em;
+}
+
+pre {
+  background: var(--code-bg);
+  border: $border-width solid var(--border);
+  border-radius: $radius;
+  padding: $space;
+  overflow-x: auto;
+
+  code {
+    background: none;
+    padding: 0;
+  }
+}
+
+blockquote {
+  border-left: 3px solid var(--border);
+  color: var(--text-muted);
+  margin-left: 0;
+  padding-left: $space;
+}
+
+table {
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+
+  th,
+  td {
+    border-bottom: $border-width solid var(--border);
+    padding: $space-sm;
+    text-align: left;
+  }
+}
+
+button {
+  font: inherit;
+}

@@ -1,0 +1,21 @@
+{%- comment -%}
+  Theme picker. Labels and order come from the `themes` list in _config.yml;
+  the colors for each id live in the $themes map in _sass/_variables.scss.
+{%- endcomment -%}
+{%- if site.themes and site.themes != empty %}
+<details class="theme-picker">
+  <summary class="theme-picker__button">
+    <span class="theme-picker__current">Theme</span>
+  </summary>
+
+  <ul class="theme-picker__list">
+    {%- for theme in site.themes %}
+    <li>
+      <button class="theme-picker__option" type="button" data-theme="{{ theme.id }}">
+        {{ theme.label | default: theme.id }}
+      </button>
+    </li>
+    {%- endfor %}
+  </ul>
+</details>
+{%- endif %}

@@ -1,0 +1,42 @@
+@use "../variables" as *;
+
+// <details> dropdown — markup comes from _includes/dropdown.html.
+.dropdown__summary {
+  cursor: pointer;
+  display: flex;
+  list-style: none; // hides the native marker in Firefox
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  // Stands in for the native marker so it can flip on [open].
+  &::before {
+    color: var(--text-muted);
+    content: "▸";
+    flex: 0 0 1em;
+  }
+
+  &:hover {
+    color: var(--link);
+  }
+}
+
+.dropdown[open] > .dropdown__summary::before {
+  content: "▾";
+}
+
+.dropdown__title p {
+  margin: 0;
+
+  &:first-child {
+    color: var(--heading);
+    font-weight: 600;
+  }
+}
+
+.dropdown__body {
+  // Indent aligns the body under the summary text, past the ▸ marker.
+  margin: $space-sm 0;
+  padding-left: 1rem;
+}

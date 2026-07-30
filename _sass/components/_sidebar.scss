@@ -1,0 +1,159 @@
+@use "../variables" as *;
+
+// ---------------------------------------------------------------------------
+// Mobile (default): a bar at the top of the page. It sits in normal flow, so
+// it scrolls away with the page. Only the title + description show; nav, theme
+// toggle and footer live in .sidebar__panel, which the button drops down.
+// ---------------------------------------------------------------------------
+.sidebar {
+  background: var(--bg-sidebar);
+  border-bottom: $border-width solid var(--border);
+}
+
+.sidebar__bar {
+  align-items: center;
+  display: flex;
+  gap: $space;
+  justify-content: space-between;
+  padding: $space;
+}
+
+.sidebar__brand {
+  min-width: 0;
+}
+
+.sidebar__title {
+  color: var(--heading);
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: $line-height-tight;
+  text-decoration: none;
+}
+
+.sidebar__desc {
+  color: var(--text-muted);
+  font-size: $font-size-sm;
+  margin: 0.15rem 0 0;
+}
+
+// Dropdown button — hidden on desktop.
+.sidebar__toggle {
+  align-items: center;
+  background: none;
+  border: $border-width solid var(--border);
+  border-radius: $radius;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  flex: none;
+  height: 2.25rem;
+  justify-content: center;
+  width: 2.25rem;
+
+  &:hover {
+    background: var(--bg-hover);
+  }
+}
+
+// Chevron; flips when the panel is open.
+.sidebar__toggle-icon {
+  border-bottom: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  height: 0.5rem;
+  transform: translateY(-0.15rem) rotate(45deg);
+  transition: transform $transition;
+  width: 0.5rem;
+}
+
+.sidebar__panel {
+  display: none;
+  padding: 0 $space $space;
+}
+
+.sidebar.is-open {
+  .sidebar__panel {
+    display: block;
+  }
+
+  .sidebar__toggle-icon {
+    transform: translateY(0.1rem) rotate(225deg);
+  }
+}
+
+// Nav ---------------------------------------------------------------------
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  border-radius: $radius;
+  color: var(--text);
+  display: block;
+  padding: $space-sm;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--bg-hover);
+    color: var(--text);
+  }
+
+  &--current {
+    color: var(--accent);
+    font-weight: 600;
+  }
+}
+
+// Footer ------------------------------------------------------------------
+.sidebar__footer {
+  border-top: $border-width solid var(--border);
+  margin-top: $space;
+  padding-top: $space;
+}
+
+.sidebar__footer-text {
+  color: var(--text-muted);
+  font-size: $font-size-xs;
+  margin: $space-sm 0 0;
+}
+
+// ---------------------------------------------------------------------------
+// Desktop: fixed full-height column on the left, footer pinned to the bottom.
+// ---------------------------------------------------------------------------
+@media (min-width: $breakpoint-mobile) {
+  .sidebar {
+    border-bottom: 0;
+    border-right: $border-width solid var(--border);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    left: 0;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    width: $sidebar-width;
+  }
+
+  .sidebar__bar {
+    display: block;
+    padding: $space-lg $space $space;
+  }
+
+  .sidebar__toggle {
+    display: none;
+  }
+
+  // Always expanded, and it stretches so the footer sits at the bottom.
+  .sidebar__panel,
+  .sidebar.is-open .sidebar__panel {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .sidebar__nav {
+    flex: 1;
+  }
+}

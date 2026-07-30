@@ -1,0 +1,26 @@
+---
+layout: page
+title: Projects
+nav_order: 3
+---
+
+{%- comment -%}
+  Entries come from _data/projects.yml, in the order written there. Each links
+  out to its repo — there are no per-project pages.
+{%- endcomment -%}
+
+<ul class="entry-list">
+  {%- for project in site.data.projects %}
+  {%- assign desc = project.desc | default: "" | strip_html | normalize_whitespace | strip %}
+  <li class="entry-list__item">
+    <div class="entry-list__row">
+      <a class="entry-list__link" href="{{ project.link }}" target="_blank" rel="noopener noreferrer">{{ project.title }}</a>
+    </div>
+    {%- if desc != "" %}
+    <p class="entry-list__desc entry-list__desc--full">{{ desc }}</p>
+    {%- endif %}
+  </li>
+  {%- else %}
+  <li class="entry-list__item entry-list__item--empty">No projects yet.</li>
+  {%- endfor %}
+</ul>

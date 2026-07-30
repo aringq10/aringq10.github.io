@@ -1,0 +1,21 @@
+{%- comment -%}
+  See `socials` list in _config.yml. Each entry's `icon` resolves to _includes/icons/<icon>.svg.
+{%- endcomment -%}
+{%- if site.socials and site.socials != empty %}
+<ul class="socials">
+  {%- for item in site.socials %}
+  {%- assign icon = "icons/" | append: item.icon | append: ".svg" %}
+  <li>
+    <a
+      class="social"
+      href="{{ item.url }}"
+      title="{{ item.name }}"
+      {%- unless item.url contains "mailto:" %} target="_blank" rel="noopener noreferrer me"{% endunless %}
+    >
+      {%- include {{ icon }} -%}
+      <span class="social__name">{{ item.name }}</span>
+    </a>
+  </li>
+  {%- endfor %}
+</ul>
+{%- endif %}

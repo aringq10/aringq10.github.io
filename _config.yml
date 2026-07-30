@@ -1,0 +1,62 @@
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+
+# Sidebar
+title: "Aringas Civilka"
+description:
+lang: "en"
+
+footer_text:
+
+# Sidebar theme picker. Each `id` must match a key in the $themes map in
+# _sass/_variables.scss, which is where the colors live. Order is respected.
+themes:
+  - id: light
+    label: Light
+  - id: dark
+    label: Dark
+  - id: tokyonight
+    label: Tokyo Night
+
+# `icon` names a file in _includes/icons/.
+socials:
+  - name: aringq10
+    icon: github
+    url: "https://github.com/aringq10"
+  - name: "aringas.benas.civilka@gmail.com"
+    icon: email
+    url: "mailto:aringas.benas.civilka@gmail.com"
+
+plugins:
+  - jekyll-paginate
+
+# jekyll-paginate drives /posts/. It supports exactly one paginated page, and
+# that page must be named index.html and live in the directory named by
+# paginate_path (here: posts/index.html).
+paginate: 3
+paginate_path: "/posts/page:num/"
+
+permalink: pretty
+
+sass:
+  style: expanded
+  sourcemap: never
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /posts/:title/
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      nav_order: 100
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md

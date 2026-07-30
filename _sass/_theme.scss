@@ -1,0 +1,48 @@
+@use "sass:list";
+@use "variables" as *;
+
+// Emits one block of CSS custom properties per theme in $themes.
+// `light` also lands on :root so the page is styled even before the inline
+// theme script in _includes/head.html runs.
+//
+// Anchored to `html`, not a bare [data-theme]: the picker's option buttons carry
+// data-theme too, and an unscoped selector would redefine every property on each
+// button, so each row would render in its own palette.
+@each $name, $theme in $themes {
+  $selector: if(
+    $name == light,
+    ':root, html[data-theme="#{$name}"]',
+    'html[data-theme="#{$name}"]'
+  );
+
+  #{$selector} {
+    @each $key, $value in $theme {
+      --#{$key}: #{$value};
+    }
+  }
+}
+
+// Marks the active entry in the picker. Done per theme in CSS rather than in
+// JS so the right row is already checked on first paint.
+@each $name, $theme in $themes {
+  [data-theme="#{$name}"] .theme-picker__option[data-theme="#{$name}"] {
+    color: var(--accent);
+    font-weight: 600;
+
+    &::after {
+      content: "✓";
+      margin-left: auto;
+    }
+  }
+}
+
+// Scrollbars and form controls follow the theme.
+html {
+  color-scheme: light;
+
+  @each $name in $dark-themes {
+    &[data-theme="#{$name}"] {
+      color-scheme: dark;
+    }
+  }
+}

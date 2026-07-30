@@ -1,0 +1,42 @@
+{% comment %}
+
+A collapsible <details> section.
+
+params:
+  summary - heading text. Newlines and <br> split it into separate paragraphs,
+            the first of which is styled as the title.
+  body    - pre-rendered contents; build it with `capture`.
+  items   - a list, rendered as a <ul>. Shorthand for the common case, and
+            ignored when `body` is given.
+
+{% endcomment %}
+
+{%- assign summary_lines = include.summary
+  | default: ""
+  | newline_to_br
+  | replace: "<br>", "<br />"
+  | split: "<br />"
+-%}
+
+<details class="dropdown">
+  <summary class="dropdown__summary">
+    <div class="dropdown__title">
+      {%- for line in summary_lines -%}
+        {%- assign trimmed = line | strip -%}
+        {%- if trimmed != "" %}<p>{{ trimmed }}</p>{% endif -%}
+      {%- endfor -%}
+    </div>
+  </summary>
+
+  <div class="dropdown__body">
+    {%- if include.body -%}
+      {{ include.body }}
+    {%- elsif include.items -%}
+      <ul>
+        {%- for item in include.items %}
+        <li>{{ item }}</li>
+        {%- endfor %}
+      </ul>
+    {%- endif -%}
+  </div>
+</details>

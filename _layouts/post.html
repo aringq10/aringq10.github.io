@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{%- comment -%}
+  Which page of the index does this post sit on? site.posts is newest-first,
+  the same order jekyll-paginate slices, so the position divided by the page
+  size gives the page number. Falls back to page 1 if pagination is off.
+{%- endcomment -%}
+{%- assign post_index = 0 -%}
+{%- for p in site.posts -%}
+  {%- if p.url == page.url -%}
+    {%- assign post_index = forloop.index0 -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if site.paginate -%}
+  {%- assign back_page = post_index | divided_by: site.paginate | plus: 1 -%}
+{%- else -%}
+  {%- assign back_page = 1 -%}
+{%- endif -%}
+
+<article class="page">
+  <header class="page__header">
+    <h1 class="page__title">{{ page.title }}</h1>
+    <p class="page__meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%Y-%m-%d" }}
+      </time>
+    </p>
+  </header>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  <p class="page__back">
+    <a href="{% include posts-page-url.html num=back_page %}">
+      &larr; Back to Posts
+    </a>
+  </p>
+</article>

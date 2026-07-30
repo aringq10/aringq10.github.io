@@ -1,0 +1,29 @@
+@use "variables" as *;
+
+// Mobile-first: sidebar bar on top, content below it.
+.layout {
+  display: block;
+}
+
+.main {
+  padding: $space-lg $space;
+}
+
+.main__inner {
+  margin: 0 auto;
+  max-width: $content-max-width;
+}
+
+@media (min-width: $breakpoint-mobile) {
+  .layout {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .main {
+    flex: 1;
+    min-width: 0;
+    margin-left: $sidebar-width;
+    padding: $space-lg * 1.5 $space-lg;
+  }
+}

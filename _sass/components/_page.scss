@@ -1,0 +1,29 @@
+@use "../variables" as *;
+
+.page__header {
+  border-bottom: $border-width solid var(--border);
+  margin-bottom: $space-lg;
+  padding-bottom: $space;
+}
+
+.page__title {
+  margin: 0;
+}
+
+.page__desc,
+.page__meta {
+  color: var(--text-muted);
+  font-size: $font-size-sm;
+  margin: $space-sm 0 0;
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+.page__back {
+  border-top: $border-width solid var(--border);
+  font-size: $font-size-sm;
+  margin-top: $space-lg;
+  padding-top: $space;
+}

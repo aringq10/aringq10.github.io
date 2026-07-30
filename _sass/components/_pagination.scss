@@ -1,0 +1,51 @@
+@use "../variables" as *;
+
+// Three fixed columns rather than space-between, so the status stays centered
+// on the first and last pages, where one of the links isn't rendered at all.
+//
+// The side tracks are minmax(0, 1fr), not 1fr: plain 1fr is minmax(auto, 1fr),
+// which won't shrink below the link's min-content width and would let a wide
+// link push the middle column off center on narrow screens.
+.pagination {
+  align-items: center;
+  display: grid;
+  gap: $space;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  margin-top: $space-lg;
+}
+
+// Arrow glyphs are small targets, so give them padding rather than an underline
+// on hover.
+.pagination__link {
+  border-radius: $radius;
+  font-size: $font-size-sm;
+  font-variant-numeric: tabular-nums;
+  padding: $space-sm * 0.5 $space-sm;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    background: var(--bg-hover);
+  }
+}
+
+.pagination__side {
+  display: flex;
+  gap: $space-sm * 0.5;
+  grid-column: 1;
+  justify-self: start;
+
+  &--next {
+    grid-column: 3;
+    justify-self: end;
+  }
+}
+
+.pagination__status {
+  color: var(--text-muted);
+  font-size: $font-size-xs;
+  grid-column: 2;
+  text-align: center;
+  white-space: nowrap;
+}
+

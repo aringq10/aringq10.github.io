@@ -1,0 +1,70 @@
+@use "../variables" as *;
+
+// Sits at the bottom of the sidebar, so the list opens *upward* — otherwise it
+// would push the footer past the bottom of the fixed column.
+.theme-picker {
+  position: relative;
+}
+
+.theme-picker__button {
+  align-items: center;
+  border: $border-width solid var(--border);
+  border-radius: $radius;
+  cursor: pointer;
+  display: flex;
+  font-size: $font-size-sm;
+  gap: $space-sm;
+  list-style: none; // hides the native <details> marker in Firefox
+  padding: $space-sm * 0.75 $space-sm;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:hover {
+    background: var(--bg-hover);
+  }
+}
+
+// Chevron, flipped when the list is open.
+.theme-picker__current::after {
+  content: "▾";
+  color: var(--text-muted);
+  margin-left: $space-sm * 0.5;
+}
+
+.theme-picker[open] .theme-picker__current::after {
+  content: "▴";
+}
+
+.theme-picker__list {
+  background: var(--bg-surface);
+  border: $border-width solid var(--border);
+  border-radius: $radius;
+  bottom: calc(100% + #{$space-sm * 0.5});
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: $space-sm * 0.5;
+  position: absolute;
+  right: 0;
+  z-index: 20;
+}
+
+.theme-picker__option {
+  align-items: center;
+  background: none;
+  border: 0;
+  border-radius: $radius;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  font-size: $font-size-sm;
+  padding: $space-sm * 0.5 $space-sm * 0.75;
+  text-align: left;
+  width: 100%;
+
+  &:hover {
+    background: var(--bg-hover);
+  }
+}

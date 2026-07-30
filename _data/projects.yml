@@ -1,0 +1,11 @@
+# Projects listed on /projects/.
+#
+#   title - link text
+#   desc  - one line, shown under the title (optional)
+#   link  - URL
+#
+# Rendered in the order written here.
+
+- title: TCP - The Chess Project
+  desc: A networked chess game client in C++ and remote server in Go.
+  link: "https://github.com/aringq10/TCP"

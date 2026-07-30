@@ -1,0 +1,57 @@
+@use "../variables" as *;
+
+// Index rows: a title, a right-aligned meta value, and an optional one-line
+// description underneath. Shared by /posts/ and /projects/.
+.entry-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.entry-list__item {
+  border-bottom: $border-width solid var(--border);
+  padding: $space-sm 0;
+}
+
+// Title and meta share a line; the description sits underneath.
+.entry-list__row {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-sm;
+  justify-content: space-between;
+}
+
+.entry-list__link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.entry-list__meta {
+  color: var(--text-muted);
+  font-size: $font-size-sm;
+  font-variant-numeric: tabular-nums;
+}
+
+.entry-list__desc {
+  color: var(--text-muted);
+  font-size: $font-size-sm;
+  margin: 0.15rem 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Opts out of the one-line clipping: wraps to as many lines as it needs.
+.entry-list__desc--full {
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+}
+
+.entry-list__item--empty {
+  color: var(--text-muted);
+}
