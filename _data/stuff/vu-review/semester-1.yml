@@ -11,74 +11,48 @@
 
 title: |
   1st semester
-  2023 autumn
+  2025 autumn
 
 notes: |
-  The first semester is mostly a **filter**. Half the lectures assume you have
-  never touched a terminal, the other half assume you have been writing C since
-  birth — there is no middle ground.
-
-  Things that actually helped:
-
-  - doing the labs a week early, before the queue for defending them piles up
-  - [cdecl](https://cdecl.org) for parsing C declarations
-  - a second monitor, mostly for the lecture recordings
-
-  Attendance is not graded anywhere except Discrete Mathematics.
+  Attendance was only manditory for english, with some cap on lectures allowed
+  to skip. Final grade was 9.33, ranked 17/188, got a scolarship of 814 EUR.
 
 subjects:
-  - title: Programming (Programavimas)
+  - title: English
     professors:
-      - Prof. Vardenis Pavardenis
-      - Asist. Kamelis Bulakas
+      - Laura Giniūnienė
     review: |
-      C from `printf` to linked lists in 15 weeks. Lectures are decent but the
-      real work is in the labs — six of them, each defended in person, each with
-      a *"now explain why you wrote it this way"* round at the end.
-
-      Write your own tests. The auto-grader is stricter than the spec.
+      TBD
     evaluation:
-      - Difficulty: 6/10
-      - Usefulness: 9/10
-      - Workload: 8/10
-      - Lectures: 7/10
-      - Exam: Written, 50%
-
-  - title: Discrete Mathematics (Diskrečioji matematika)
+  - title: Discrete Mathematics
     professors:
-      - Doc. Vardė Pavardė
+      - Gintaras Skersys
     review: |
-      Sets, relations, induction, graphs, a bit of combinatorics. Taught well,
-      but the pace assumes you remember high-school proofs.
-
-      The midterms are where the grade is won — the final is mostly the same
-      material with bigger numbers.
+      TBD
     evaluation:
-      - Difficulty: 7/10
-      - Usefulness: 8/10
-      - Workload: 5/10
-      - Lectures: 8/10
-
-  - title: Computer Architecture (Kompiuterių architektūra)
+  - title: Computer Architecture
     professors:
-      - Lekt. A. Pavardaitis
+      - Vytautas Valaitis (Lectures)
+      - Kęstutis Mizara (Labs)
     review: |
-      Logic gates → adders → a toy CPU, then assembly at the very end. The
-      hardware half is great; the assembly half is rushed into the last three
-      weeks and it shows.
+      TBD
     evaluation:
-      - Difficulty: 5/10
-      - Usefulness: 7/10
-      - Workload: 4/10
-      - Lectures: 6/10
-
-  - title: Foreign Language (Užsienio kalba)
+  - title: Mathematics for Software Engineering
     professors:
-      - Lekt. B. Pavardaitė
+      - Edmundas Mazėtis
     review: |
-      Attendance with extra steps. One presentation, one written assignment.
-      Take it seriously enough to pass and spend the time on Programming.
+      TBD
     evaluation:
-      - Difficulty: 2/10
-      - Usefulness: 3/10
-      - Workload: 2/10
+  - title: Practical Informatics
+    professors:
+      - A. V. Misiukas Misiūnas (Lectures)
+      - Jonas Žagūnas (Labs)
+    review: |
+      TBD
+    evaluation:
+  - title: Procedural Programming
+    professors:
+      - Irmantas Radavičius
+    review: |
+      TBD
+    evaluation:
