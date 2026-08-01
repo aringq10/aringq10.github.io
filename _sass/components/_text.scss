@@ -1,0 +1,51 @@
+@use "../variables" as *;
+
+// Small reusable text styles.
+
+// Small caps heading for a block of content, lighter than a real <h*>.
+.label {
+  color: var(--heading);
+  font-size: $font-size-sm;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: $space 0 $space-sm;
+  text-transform: uppercase;
+}
+
+// An unmarked list of short, secondary lines — names, tags, asides.
+.muted-list {
+  color: var(--text-muted);
+  font-size: $font-size-sm;
+  list-style: none;
+  margin: 0 0 $space;
+  padding: 0;
+}
+
+.muted-list__item {
+  padding: 0.1rem 0;
+}
+
+// Key/value pairs in two aligned columns: "Difficulty  7/10".
+.kv-list {
+  display: grid;
+  gap: 0 $space;
+  grid-template-columns: auto 1fr;
+  list-style: none;
+  margin: $space 0 0;
+  padding: 0;
+}
+
+// Lets each key/value land in its own grid cell instead of the <li> being one.
+.kv-list__item {
+  display: contents;
+}
+
+.kv-list__key {
+  color: var(--text-muted);
+  font-size: $font-size-sm;
+}
+
+.kv-list__value {
+  font-family: $font-mono;
+  font-size: $font-size-sm;
+}

@@ -33,6 +33,11 @@
     color: var(--heading);
     font-weight: 600;
   }
+
+  &:not(:first-child) {
+    color: var(--text-muted);
+    font-size: $font-size-sm;
+  }
 }
 
 .dropdown__body {

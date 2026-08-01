@@ -3,8 +3,9 @@
 A collapsible <details> section.
 
 params:
-  summary - heading text. Newlines and <br> split it into separate paragraphs,
-            the first of which is styled as the title.
+  summary - heading text. Newlines and <br> split it into separate lines: the
+            first is the title, the rest are muted subtitles. Every line is
+            rendered as inline markdown, so callers pass plain text.
   body    - pre-rendered contents; build it with `capture`.
   items   - a list, rendered as a <ul>. Shorthand for the common case, and
             ignored when `body` is given.
@@ -23,7 +24,23 @@ params:
     <div class="dropdown__title">
       {%- for line in summary_lines -%}
         {%- assign trimmed = line | strip -%}
-        {%- if trimmed != "" %}<p>{{ trimmed }}</p>{% endif -%}
+        {%- if trimmed != "" -%}
+          {%- comment -%}
+            markdown="span" keeps kramdown from reading a line as a block —
+            without it a title like "1. 1945-1965" becomes an ordered list.
+          {%- endcomment -%}
+          {%- assign inline = '<span markdown="span">'
+            | append: trimmed
+            | append: "</span>"
+            | markdownify
+            | remove: "<p>"
+            | remove: "</p>"
+            | strip
+            | remove_first: "<span>"
+          -%}
+          {%- assign inline_length = inline | size | minus: 7 -%}
+          <p>{{ inline | slice: 0, inline_length }}</p>
+        {%- endif -%}
       {%- endfor -%}
     </div>
   </summary>

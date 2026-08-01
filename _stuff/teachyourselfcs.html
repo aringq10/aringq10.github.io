@@ -3,6 +3,10 @@ title: Teachyourselfcs
 excerpt: Teaching myself Computer Science
 ---
 
+{% comment %}
+  Content lives in _data/stuff/teachyourselfcs.yml.
+{% endcomment %}
+
 <p>
   Supplementing my studies with
   {% include link.html
@@ -14,56 +18,52 @@ excerpt: Teaching myself Computer Science
 <br>
 
 {% for topic in site.data.stuff.teachyourselfcs %}
-  {% capture tmp-body %}
+  {% capture topic_body %}
     {% for item in topic.preface-links %}
       {% include link.html link=item.link text=item.text %}
       <br>
     {% endfor %}
+    <br>
+
     {% if topic.preface %}
-      <br>
-      {{ topic.preface | markdownify | newline_to_br }}
-    {% else %}
-      <br>
+      {{ topic.preface | markdownify }}
     {% endif %}
 
-    {% capture progress-table %}
-      <table class="data-table">
-        <tr>
-          {% for h in topic.progress.header %}
-            <th>{{ h | markdownify | newline_to_br }}</th>
-          {% endfor %}
-        </tr>
-        {% for r in topic.progress.rows %}
+    {% if topic.progress %}
+      {% capture progress_table %}
+        <table class="data-table">
           <tr>
-            <td>{{ r.title | markdownify | newline_to_br }}</td>
-            <td>
-              {{ r.data | markdownify | newline_to_br }}
-              {% if r.comment %}
-                <i>
-                  {{ r.comment | markdownify }}
-                </i>
-              {% endif %}
-            </td>
+            {% for header in topic.progress.header %}
+              <th>{{ header | strip | newline_to_br | markdownify }}</th>
+            {% endfor %}
           </tr>
-        {% endfor %}
-      </table>
-    {% endcapture %}
-    {% assign progress-title = "Progress<br>"
-      | append: topic.progress.title
-      | markdownify
-      | newline_to_br
-    %}
-    {% include dropdown.html
-      summary=progress-title
-      body=progress-table
-    %}
+          {% for row in topic.progress.rows %}
+            <tr>
+              <td>{{ row.title | strip | newline_to_br | markdownify }}</td>
+              <td>
+                {{ row.data | strip | newline_to_br | markdownify }}
+                {% if row.comment %}
+                  <div class="data-table__note">{{ row.comment | markdownify }}</div>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </table>
+      {% endcapture %}
+
+      {% capture progress_title %}Progress
+        {{ topic.progress.title }}{% endcapture %}
+
+      {% include dropdown.html
+        summary=progress_title
+        body=progress_table
+      %}
+    {% endif %}
   {% endcapture %}
 
-  {% assign final-title = topic.title | markdownify | newline_to_br %}
   {% include dropdown.html
-    summary=final-title
-    body=tmp-body
+    summary=topic.title
+    body=topic_body
   %}
   <br>
 {% endfor %}
-

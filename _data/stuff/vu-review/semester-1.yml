@@ -1,0 +1,84 @@
+# One file per semester. Files are ordered by filename, so keep the
+# `semester-N.yml` naming.
+#
+#   title       - dropdown heading
+#   subtitle    - optional second line under the heading (smaller, muted)
+#   notes       - free-form markdown
+#   subjects    - list of { title, professors, review (markdown), evaluation }
+#   professors  - plain list of names, e.g. `- Jonas Padelis`
+#   evaluation  - list of single key/value pairs, e.g. `- Difficulty: 7/10`
+#
+# MOCK DATA — placeholder names and text, here to show the layout.
+
+title: 1st semester
+subtitle: 2023 autumn
+
+notes: |
+  The first semester is mostly a **filter**. Half the lectures assume you have
+  never touched a terminal, the other half assume you have been writing C since
+  birth — there is no middle ground.
+
+  Things that actually helped:
+
+  - doing the labs a week early, before the queue for defending them piles up
+  - [cdecl](https://cdecl.org) for parsing C declarations
+  - a second monitor, mostly for the lecture recordings
+
+  Attendance is not graded anywhere except Discrete Mathematics.
+
+subjects:
+  - title: Programming (Programavimas)
+    professors:
+      - Prof. Vardenis Pavardenis
+      - Asist. Kamelis Bulakas
+    review: |
+      C from `printf` to linked lists in 15 weeks. Lectures are decent but the
+      real work is in the labs — six of them, each defended in person, each with
+      a *"now explain why you wrote it this way"* round at the end.
+
+      Write your own tests. The auto-grader is stricter than the spec.
+    evaluation:
+      - Difficulty: 6/10
+      - Usefulness: 9/10
+      - Workload: 8/10
+      - Lectures: 7/10
+      - Exam: Written, 50%
+
+  - title: Discrete Mathematics (Diskrečioji matematika)
+    professors:
+      - Doc. Vardė Pavardė
+    review: |
+      Sets, relations, induction, graphs, a bit of combinatorics. Taught well,
+      but the pace assumes you remember high-school proofs.
+
+      The midterms are where the grade is won — the final is mostly the same
+      material with bigger numbers.
+    evaluation:
+      - Difficulty: 7/10
+      - Usefulness: 8/10
+      - Workload: 5/10
+      - Lectures: 8/10
+
+  - title: Computer Architecture (Kompiuterių architektūra)
+    professors:
+      - Lekt. A. Pavardaitis
+    review: |
+      Logic gates → adders → a toy CPU, then assembly at the very end. The
+      hardware half is great; the assembly half is rushed into the last three
+      weeks and it shows.
+    evaluation:
+      - Difficulty: 5/10
+      - Usefulness: 7/10
+      - Workload: 4/10
+      - Lectures: 6/10
+
+  - title: Foreign Language (Užsienio kalba)
+    professors:
+      - Lekt. B. Pavardaitė
+    review: |
+      Attendance with extra steps. One presentation, one written assignment.
+      Take it seriously enough to pass and spend the time on Programming.
+    evaluation:
+      - Difficulty: 2/10
+      - Usefulness: 3/10
+      - Workload: 2/10

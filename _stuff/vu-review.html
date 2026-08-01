@@ -1,0 +1,81 @@
+---
+title: VU Software Engineering Review
+excerpt: My review of every subject in the Vilnius University Software Engineering (Programų sistemos) bachelor.
+---
+
+{% comment %}
+  Content lives in _data/stuff/vu-review/.
+{% endcomment %}
+
+<p>
+  A review of the
+  {% include link.html
+    link="https://www.vu.lt/stojantiesiems/bakalauro/programu-sistemos"
+    text="Programų sistemos"
+  %}
+  bachelor at Vilnius University.
+</p>
+
+<br>
+
+{%- assign semesters = site.data.stuff.vu-review | sort -%}
+
+<div class="stack">
+{% for entry in semesters %}
+  {%- assign semester = entry[1] -%}
+
+  {% capture semester_body %}
+    {% if semester.notes %}
+      <p class="label">Notes</p>
+      {{ semester.notes | markdownify }}
+    {% endif %}
+
+    {% if semester.subjects %}
+      <p class="label">Subjects</p>
+      {% for subject in semester.subjects %}
+        <section class="section">
+          <h3 class="section__title">{{ subject.title }}</h3>
+
+          {% if subject.professors %}
+            <ul class="muted-list">
+              {% for professor in subject.professors %}
+                <li class="muted-list__item">
+                  {{ professor | markdownify | remove: "<p>" | remove: "</p>" }}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+
+          {{ subject.review | markdownify }}
+
+          {% if subject.evaluation %}
+            <ul class="kv-list">
+              {% for metric in subject.evaluation %}
+                {% for pair in metric %}
+                  <li class="kv-list__item">
+                    <span class="kv-list__key">{{ pair[0] }}</span>
+                    <span class="kv-list__value">{{ pair[1] }}</span>
+                  </li>
+                {% endfor %}
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </section>
+      {% endfor %}
+    {% endif %}
+  {% endcapture %}
+
+  {%- assign semester_title = semester.title -%}
+  {%- if semester.subtitle -%}
+    {%- assign semester_title = semester_title
+      | append: "
+"
+      | append: semester.subtitle -%}
+  {%- endif -%}
+
+  {% include dropdown.html
+    summary=semester_title
+    body=semester_body
+  %}
+{% endfor %}
+</div>

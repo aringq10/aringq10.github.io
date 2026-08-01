@@ -31,3 +31,10 @@
     margin: 0;
   }
 }
+
+.data-table__note {
+  color: var(--text-muted);
+  font-size: $font-size-sm;
+  font-style: italic;
+  margin-top: $space-sm;
+}

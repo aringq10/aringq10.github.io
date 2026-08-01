@@ -1,0 +1,26 @@
+@use "../variables" as *;
+
+// Generic content blocks: a titled section, and a stack that spaces whatever
+// you put in it. Neither knows what it is wrapping.
+
+// One block of content under its own heading. Consecutive sections are split
+// by a rule, so the first one still sits tight under whatever precedes it.
+.section {
+  border-top: $border-width solid var(--border);
+  padding-top: $space;
+
+  & + & {
+    margin-top: $space-lg;
+  }
+}
+
+.section__title {
+  font-size: 1rem;
+  margin: 0 0 $space-sm;
+}
+
+// Puts a gap between direct children — for lists of blocks that bring no
+// margins of their own, like a run of dropdowns.
+.stack > * + * {
+  margin-top: $space;
+}
