@@ -15,15 +15,15 @@ excerpt: Teaching myself Computer Science
   %}
 </p>
 
-<br>
-
 {% for topic in site.data.stuff.teachyourselfcs %}
   {% capture topic_body %}
-    {% for item in topic.preface-links %}
-      {% include link.html link=item.link text=item.text %}
-      <br>
-    {% endfor %}
-    <br>
+    <ul class="link-list">
+      {% for item in topic.preface-links %}
+        <li class="link-list__item">
+          {% include link.html link=item.link text=item.text %}
+        </li>
+      {% endfor %}
+    </ul>
 
     {% if topic.preface %}
       {{ topic.preface | markdownify }}
@@ -43,7 +43,7 @@ excerpt: Teaching myself Computer Science
               <td>
                 {{ row.data | strip | newline_to_br | markdownify }}
                 {% if row.comment %}
-                  <div class="data-table__note">{{ row.comment | markdownify }}</div>
+                  <div class="note">{{ row.comment | markdownify }}</div>
                 {% endif %}
               </td>
             </tr>

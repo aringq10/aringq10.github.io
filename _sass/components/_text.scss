@@ -12,6 +12,22 @@
   text-transform: uppercase;
 }
 
+// An aside under a block of content — a caveat, a footnote, a "* but...".
+.note {
+  color: var(--text-muted);
+  font-size: $font-size-sm;
+  font-style: italic;
+  margin-top: $space-sm;
+
+  p {
+    margin: 0 0 $space-sm;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 // An unmarked list of short, secondary lines — names, tags, asides.
 .muted-list {
   color: var(--text-muted);
@@ -48,4 +64,31 @@
 .kv-list__value {
   font-family: $font-mono;
   font-size: $font-size-sm;
+}
+
+// A vertical run of bare links — downloads, further reading.
+.link-list {
+  list-style: none;
+  margin: 0 0 $space;
+  padding: 0;
+}
+
+.link-list__item {
+  padding: 0.1rem 0;
+}
+
+// Table of contents: a list of anchors into the page below it. Nests.
+.toc {
+  margin: 0 0 $space;
+  padding-left: 1.5rem;
+
+  ol,
+  ul {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    padding: 0.1rem 0;
+  }
 }

@@ -7,8 +7,6 @@ params:
             first is the title, the rest are muted subtitles. Every line is
             rendered as inline markdown, so callers pass plain text.
   body    - pre-rendered contents; build it with `capture`.
-  items   - a list, rendered as a <ul>. Shorthand for the common case, and
-            ignored when `body` is given.
 
 {% endcomment %}
 
@@ -46,14 +44,6 @@ params:
   </summary>
 
   <div class="dropdown__body">
-    {%- if include.body -%}
-      {{ include.body }}
-    {%- elsif include.items -%}
-      <ul>
-        {%- for item in include.items %}
-        <li>{{ item }}</li>
-        {%- endfor %}
-      </ul>
-    {%- endif -%}
+    {{- include.body -}}
   </div>
 </details>

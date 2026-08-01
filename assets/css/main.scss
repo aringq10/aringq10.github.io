@@ -19,3 +19,6 @@
 @use "components/text";
 @use "components/section";
 @use "components/table";
+
+// Utilities last — single-purpose helpers should win.
+@use "utilities";

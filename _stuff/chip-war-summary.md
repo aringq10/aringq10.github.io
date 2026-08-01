@@ -5,11 +5,18 @@ title: Chip War Summary
 <br>
 <br>
 {% for ch in site.data.stuff.chip-war-summary %}
+  {% capture chapter_points %}
+    <ul>
+      {% for point in ch.points %}
+        <li>{{ point }}</li>
+      {% endfor %}
+    </ul>
+  {% endcapture %}
   {% include dropdown.html
      summary=ch.title
-     items=ch.points
+     body=chapter_points
   %}
   {% unless forloop.last %}
-  <hr>
+  <hr class="divider">
   {% endunless %}
 {% endfor %}

@@ -1,0 +1,16 @@
+@use "variables" as *;
+
+// Single-purpose helpers. Keep this file short — anything that grows a second
+// rule probably wants to be a component instead.
+
+// Hidden visually but kept in the accessibility tree, for text that a screen
+// reader needs and a sighted user gets from context — icon-only controls, an
+// input whose placeholder is doing the labelling.
+.visually-hidden {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

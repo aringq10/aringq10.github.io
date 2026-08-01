@@ -4,17 +4,6 @@
   margin-bottom: $space-lg;
 }
 
-// Hidden visually but kept in the accessibility tree — a placeholder isn't a
-// reliable accessible name.
-.filter__label {
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .filter__input {
   background: var(--bg-surface);
   border: $border-width solid var(--border);

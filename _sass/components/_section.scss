@@ -24,3 +24,10 @@
 .stack > * + * {
   margin-top: $space;
 }
+
+// A separator between blocks, tighter than a bare <hr>. Works on any element.
+.divider {
+  border: 0;
+  border-top: $border-width solid var(--border);
+  margin: $space 0;
+}
