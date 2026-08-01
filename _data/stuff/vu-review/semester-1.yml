@@ -2,7 +2,6 @@
 # `semester-N.yml` naming.
 #
 #   title       - dropdown heading
-#   subtitle    - optional second line under the heading (smaller, muted)
 #   notes       - free-form markdown
 #   subjects    - list of { title, professors, review (markdown), evaluation }
 #   professors  - plain list of names, e.g. `- Jonas Padelis`
@@ -10,8 +9,9 @@
 #
 # MOCK DATA — placeholder names and text, here to show the layout.
 
-title: 1st semester
-subtitle: 2023 autumn
+title: |
+  1st semester
+  2023 autumn
 
 notes: |
   The first semester is mostly a **filter**. Half the lectures assume you have

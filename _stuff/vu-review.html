@@ -65,16 +65,8 @@ excerpt: My review of every subject in the Vilnius University Software Engineeri
     {% endif %}
   {% endcapture %}
 
-  {%- assign semester_title = semester.title -%}
-  {%- if semester.subtitle -%}
-    {%- assign semester_title = semester_title
-      | append: "
-"
-      | append: semester.subtitle -%}
-  {%- endif -%}
-
   {% include dropdown.html
-    summary=semester_title
+    summary=semester.title
     body=semester_body
   %}
 {% endfor %}
