@@ -56,16 +56,6 @@
   }
 }
 
-// Chevron; flips when the panel is open.
-.sidebar__toggle-icon {
-  border-bottom: 2px solid currentColor;
-  border-right: 2px solid currentColor;
-  height: 0.5rem;
-  transform: translateY(-0.15rem) rotate(45deg);
-  transition: transform $transition;
-  width: 0.5rem;
-}
-
 .sidebar__panel {
   display: none;
   padding: 0 $space $space;
@@ -76,6 +66,7 @@
     display: block;
   }
 
+  // Flip the chevron up while the panel is open.
   .sidebar__toggle-icon {
     transform: translateY(0.1rem) rotate(225deg);
   }

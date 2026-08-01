@@ -1,0 +1,17 @@
+@use "../variables" as *;
+
+// A chevron drawn from two borders on an empty <span>, in currentColor. Points
+// down by default; the modifiers rotate it. Used by the mobile nav toggle and
+// the back-to-top button.
+.chevron {
+  border-bottom: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  height: 0.5rem;
+  transform: translateY(-0.15rem) rotate(45deg);
+  transition: transform $transition;
+  width: 0.5rem;
+}
+
+.chevron--up {
+  transform: translateY(0.15rem) rotate(225deg);
+}

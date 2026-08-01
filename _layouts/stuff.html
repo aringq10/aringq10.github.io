@@ -2,6 +2,12 @@
 layout: default
 ---
 <article class="page">
+  <p class="page__back">
+    <a href="{{ '/stuff/' | relative_url }}">
+      &larr; Back to Stuff
+    </a>
+  </p>
+
   <header class="page__header">
     <h1 class="page__title">{{ page.title }}</h1>
   </header>
@@ -9,10 +15,4 @@ layout: default
   <div class="prose">
     {{ content }}
   </div>
-
-  <p class="page__back">
-    <a href="{{ '/stuff/' | relative_url }}">
-      &larr; Back to Stuff
-    </a>
-  </p>
 </article>

@@ -21,8 +21,6 @@
 }
 
 .page__back {
-  border-top: $border-width solid var(--border);
   font-size: $font-size-sm;
-  margin-top: $space-lg;
-  padding-top: $space;
+  margin: 0 0 $space;
 }

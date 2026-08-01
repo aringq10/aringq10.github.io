@@ -66,6 +66,43 @@
     });
   }
 
+  // Back to top -----------------------------------------------------------
+  var toTop = document.querySelector("[data-back-to-top]");
+
+  if (toTop) {
+    // How far down the page the button starts showing.
+    var showAfter = 400;
+    var queued = false;
+
+    var syncToTop = function () {
+      queued = false;
+      var scrolled = window.pageYOffset || root.scrollTop;
+      toTop.classList.toggle("is-visible", scrolled > showAfter);
+    };
+
+    window.addEventListener(
+      "scroll",
+      function () {
+        // One update per frame — scroll fires far more often than that.
+        if (!queued) {
+          queued = true;
+          window.requestAnimationFrame(syncToTop);
+        }
+      },
+      { passive: true }
+    );
+
+    toTop.addEventListener("click", function () {
+      var reduced =
+        window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
+    });
+
+    syncToTop();
+  }
+
   // Entry list filter -----------------------------------------------------
   var filter = document.querySelector("[data-filter]");
   var filterList = document.querySelector("[data-filter-list]");
