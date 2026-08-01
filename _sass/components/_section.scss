@@ -6,10 +6,10 @@
 // One block of content under its own heading. Consecutive sections are split
 // by a rule, so the first one still sits tight under whatever precedes it.
 .section {
-  border-top: $border-width solid var(--border);
   padding-top: $space;
 
   & + & {
+    border-top: $border-width solid var(--border);
     margin-top: $space-lg;
   }
 }
