@@ -1,0 +1,72 @@
+title: |
+  2nd semester
+  2026 spring
+
+notes: |
+  Attendance was not manditory.
+  Final grade was 8.83, scolarship status still pending.
+
+subjects:
+  - title: Algorithms and Data Structures
+    professors:
+      - Vytautas Valaitis (Lectures)
+      - Jonas Žagūnas (Labs)
+    review: |
+      TBD
+    evaluation:
+      - Difficulty:
+      - Usefulness:
+      - Workload:
+      - Engagement:
+  - title: Algorithm Theory
+    professors:
+      - Adomas Birštunas
+    review: |
+      TBD
+    evaluation:
+      - Difficulty:
+      - Usefulness:
+      - Workload:
+      - Engagement:
+  - title: Mathematics for Software Engineering 2/3
+    professors:
+      - Gintautas Bareikis (Lectures)
+      - Rimvydas Krasauskas (Labs)
+    review: |
+      TBD
+    evaluation:
+      - Difficulty:
+      - Usefulness:
+      - Workload:
+      - Engagement:
+  - title: Object Oriented Programming
+    professors:
+      - Rimantas Vaicekauskas (Lectures)
+      - Linas Litvinas (Labs)
+    review: |
+      TBD
+    evaluation:
+      - Difficulty:
+      - Usefulness:
+      - Workload:
+      - Engagement:
+  - title: Object Oriented Programming C++ (Optional)
+    professors:
+      - Irmantas Radavičius
+    review: |
+      TBD
+    evaluation:
+      - Difficulty:
+      - Usefulness:
+      - Workload:
+      - Engagement:
+  - title: Žmogus, buitis ir chemija (Optional)
+    professors:
+      - Aivaras Kareiva
+    review: |
+      TBD
+    evaluation:
+      - Difficulty:
+      - Usefulness:
+      - Workload:
+      - Engagement:
