@@ -1,4 +1,4 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://aringq10.github.io" # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # Sidebar
@@ -26,6 +26,9 @@ socials:
   - name: "aringas.benas.civilka@gmail.com"
     icon: email
     url: "mailto:aringas.benas.civilka@gmail.com"
+
+plugins:
+  - jekyll-target-blank
 
 collections:
   stuff:

@@ -43,8 +43,8 @@
           (0.8 0.8 1.8 0 0 0 2.1 2.1 6)
         comment: |
           \* Homework problems were:
-          [distance-vector routing simulator][dv]{:target="_blank" rel="noopener"}
-          and [recreating the ping command][ping]{:target="_blank" rel="noopener"}.
+          [distance-vector routing simulator][dv]
+          and [recreating the ping command][ping].
           The ping program was surprisingly easy to implement and it was cool to see it work almost the same as the
           original one. Distance vector alg is straightforward in theory but this simulator took quite some time to
           implement and figuring out the author's simulator code was very satisfying :).

@@ -13,7 +13,7 @@ nav_order: 3
   {%- assign desc = project.desc | default: "" | strip_html | normalize_whitespace | strip %}
   <li class="entry-list__item">
     <div class="entry-list__row">
-      <a class="entry-list__link" href="{{ project.link }}" target="_blank" rel="noopener noreferrer">{{ project.title }}</a>
+      <a class="entry-list__link" href="{{ project.link }}">{{ project.title }}</a>
     </div>
     {%- if desc != "" %}
     <p class="entry-list__desc entry-list__desc--full">{{ desc }}</p>

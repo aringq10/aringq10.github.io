@@ -1,7 +1,7 @@
 ---
 title: Chip War Summary
 ---
-[Chip War by Chris Miller](https://www.amazon.com/Chip-War-Worlds-Critical-Technology/dp/1982172002){:target="_blank" rel="noopener noreferrer"}
+[Chip War by Chris Miller](https://www.amazon.com/Chip-War-Worlds-Critical-Technology/dp/1982172002)
 <br>
 <br>
 {% for ch in site.data.stuff.chip-war-summary %}

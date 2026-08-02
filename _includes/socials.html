@@ -10,7 +10,7 @@
       class="social"
       href="{{ item.url }}"
       title="{{ item.name }}"
-      {%- unless item.url contains "mailto:" %} target="_blank" rel="noopener noreferrer me"{% endunless %}
+      {%- unless item.url contains "mailto:" %} rel="me"{% endunless %}
     >
       {%- include {{ icon }} -%}
       <span class="social__name">{{ item.name }}</span>

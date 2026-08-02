@@ -9,10 +9,7 @@ excerpt: Teaching myself Computer Science
 
 <p>
   Supplementing my studies with
-  {% include link.html
-    link="https://teachyourselfcs.com"
-    text="teachyourselfcs"
-  %}
+  <a href="https://teachyourselfcs.com">teachyourselfcs</a>
 </p>
 
 {% for topic in site.data.stuff.teachyourselfcs %}
@@ -20,7 +17,7 @@ excerpt: Teaching myself Computer Science
     <ul class="link-list">
       {% for item in topic.preface-links %}
         <li class="link-list__item">
-          {% include link.html link=item.link text=item.text %}
+          <a href="{{ item.link }}">{{ item.text }}</a>
         </li>
       {% endfor %}
     </ul>

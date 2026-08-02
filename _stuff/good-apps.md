@@ -3,13 +3,13 @@ title: Good Apps
 excerpt: Some good, free and useful apps.
 ---
 
-[StayFree](https://stayfreeapps.com/){:target="_blank" rel="noopener noreferrer"} - App, Website usage tracking and blocking.  
+[StayFree](https://stayfreeapps.com/) - App, Website usage tracking and blocking.  
 <br>
-[Simple Time Tracker](https://play.google.com/store/apps/details?id=com.razeeman.util.simpletimetracker&hl=en-US&pli=1){:target="_blank" rel="noopener noreferrer"} - General time tracking with your own categories and activities.  
+[Simple Time Tracker](https://play.google.com/store/apps/details?id=com.razeeman.util.simpletimetracker&hl=en-US&pli=1) - General time tracking with your own categories and activities.  
 <br>
-[FitNotes](https://www.fitnotesapp.com/){:target="_blank" rel="noopener noreferrer"} - An offline Gym Workout Log, uses SQLite.  
+[FitNotes](https://www.fitnotesapp.com/) - An offline Gym Workout Log, uses SQLite.  
 <br>
-[bitwarden](https://bitwarden.com/){:target="_blank" rel="noopener noreferrer"} - Password manager.  
+[bitwarden](https://bitwarden.com/) - Password manager.  
 <br>
-[Aegis](https://getaegis.app/){:target="_blank" rel="noopener noreferrer"} - Authenticator.  
+[Aegis](https://getaegis.app/) - Authenticator.  
 <br>
