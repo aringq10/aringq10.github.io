@@ -6,8 +6,14 @@
 #   subjects    - list of { title, professors, review (markdown), evaluation }
 #   professors  - plain list of names, e.g. `- Jonas Padelis`
 #   evaluation  - list of single key/value pairs, e.g. `- Difficulty: 7/10`
-#
-# MOCK DATA — placeholder names and text, here to show the layout.
+
+# Stuff to include in review:
+# - a note about professors
+# - quality of teaching material
+# - what was taught (the theory)
+# - what labs we did (if any)
+# - just a personal opinion on the whole thing
+# - some tips, attendance, prerequesites, grading
 
 title: |
   1st semester
@@ -15,44 +21,136 @@ title: |
 
 notes: |
   Attendance was only manditory for english, with some cap on lectures allowed
-  to skip. Final grade was 9.33, ranked 17/188, got a scolarship of 814 EUR.
+  to skip. You can skip the rest and self-study, though labs are necessary when
+  accounting for homework; no advantage by going to lectures over self-study.
+  None of the subjects required prior knowledge which you couldn't get from a
+  google search. All subject grading was either labs + exam or test + exam.
+
+  Final grade was 9.33, ranked 17/188, got a scolarship of 814 EUR. A friend
+  placed 25th or so with a ~9 and didn't get it.
 
 subjects:
   - title: English
     professors:
-      - Laura Giniūnienė
+      - Laura "nu whatever" Giniūnienė
     review: |
-      TBD
+      Same as school - exercises and learning concepts only a person taking a
+      major in english would need. At least we did some speaking stuff which is
+      always useful. I still don't get the purpose of such classes, I find that
+      everyone learns best through the internet and talking to people. Professor
+      tried her best though.
     evaluation:
+      - Difficulty: 3/10
+      - Usefulness: 2/10
+      - Workload: 4/10
+      - Engagement: 2/10
   - title: Discrete Mathematics
     professors:
       - Gintaras Skersys
     review: |
-      TBD
+      Didn't attend many of his classes, but the professor seemed chill; he
+      primarily read his slides and answered occasional questions. All material
+      was well prepared and available online as PDFs together with lecture
+      recordings, so you could learn everything from home and get a good grade.
+      On the contents: most wasn't that difficult, there was a lot of terminology
+      to memorize. Most interesting topics for me were:
+
+      - Boolean algebra. Every operation can be reduced to a sequence of ANDs,
+      ORs and NOTs; basically logic gates in CPUs.
+
+      - The introduction on cryptography caught my interest and I went on to read
+      [The Code Book by Simon Singh](https://www.amazon.com/Code-Book-Science-Secrecy-Cryptography/dp/0385495323)
+      and download some other crypto books.
+
+      Other topics were: sets, functions, math proofs, turing machine, encoding, compression.
     evaluation:
+      - Difficulty: 5/10
+      - Usefulness: 8/10
+      - Workload: 6/10
+      - Engagement: 7/10
   - title: Computer Architecture
     professors:
       - Vytautas Valaitis (Lectures)
       - Kęstutis Mizara (Labs)
     review: |
-      TBD
+      The lectures were fun at the start but eventually got boring. Valaitis
+      is cool though (check out his facebook). I found the labs interesting
+      because they taught me my first assembly language (8086), we had to do
+      a couple coding projects with it; there was also an option to write a
+      [disassembler](https://github.com/aringq10/8086-disasm) to get an almost
+      (still had to answer a couple questions during the exam) instant 10/10 grade.
+
+      The theory material was taken from a PDF "Kompiuterių architektūra - Antanas Mitašiūnas".
+      I thought it touched on many of the main CA concepts like how computers
+      represent data with bits, instruction set architecture (in this case 8086's),
+      and it presented Mitašiūnas' own 16 bit computer which covered the main
+      pieces of a CPU. Anyways, it had some poorly written explanations which
+      were hard to grasp; and it felt introductory, not covering question which
+      came up as I read the book.
+
+      I found a couple of CA textbooks from [teachyourselfcs](https://teachyourselfcs.com/)
+      which I think will fill in the gaps:
+      [The Elements of Computing Systems](https://www.nand2tetris.org/) and
+      [CS:APP](https://csapp.cs.cmu.edu/3e/home.html).
     evaluation:
-  - title: Mathematics for Software Engineering
+      - Difficulty: 6/10
+      - Usefulness: 8/10
+      - Workload: 5/10
+      - Engagement: 7/10
+  - title: Mathematics for Software Engineering 1/3
     professors:
       - Edmundas Mazėtis
     review: |
-      TBD
+      Whole thing was an introduction to linear algebra and complex numbers.
+      The material was provided as PDFs - I found it dull so I never got around
+      to learning until the exam. It was also very proof-based and had no
+      intuition at all, which was demotivating.
+      [Essence of linear algebra by 3B1B](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+      really helped me build intuition and understand what this course was trying
+      to teach me. Without it, I probably would've neither enjoyed the course
+      nor got a good mark.
+
+      Regarding linear algebra's usefulness: I haven't used anything so far,
+      but if I ever try to learn how AI or computer graphics work, it would
+      come in handy. Though I wouldn't recommend this course for it and instead
+      go with what [teachyourselfcs](https://teachyourselfcs.com/) recommends:
+      the mentioned 3B1B playlist and
+      [Introduction to Linear Algebra by Gilbert Strang](https://math.mit.edu/~gs/linearalgebra/).
     evaluation:
+      - Difficulty: 6/10
+      - Usefulness: 6/10
+      - Workload: 5/10
+      - Engagement: 5/10
   - title: Practical Informatics
     professors:
       - A. V. Misiukas Misiūnas (Lectures)
       - Jonas Žagūnas (Labs)
     review: |
-      TBD
+      Lectures consisted of the professor reading his slides. The lab classes:
+      just show Ž (Žagūnas) the homework you did which was largely copy-paste
+      from the lecture slides. The labs could have taken 20 min instead of 2h
+      if Ž didn't yap as much. The covered topics were themselves quite practical:
+      Git, Python and Latex. But you don't learn practical things just by reading
+      slides, which is what this class was.
     evaluation:
+      - Difficulty: 3/10 *look out for Ž
+      - Usefulness: 5/10
+      - Workload: 2/10
+      - Engagement: 2/10
   - title: Procedural Programming
     professors:
       - Irmantas Radavičius
     review: |
-      TBD
+      Cool professor, though that's gonna be subjective. It was basically an
+      introductory course on C, not too difficult. The labs were 4 coding
+      assignments; most work came from the fact that you needed to record
+      yourself presenting your code and write a self-reflexion paragraph.
+      The exam was on paper and different than any others - there were no
+      single correct answers and I believe everyone wrote different ones,
+      so I'm guessing the professor was grading more of our understanding
+      and thinking than our final answers.
     evaluation:
+      - Difficulty: 3/10
+      - Usefulness: 4/10
+      - Workload: 4/10
+      - Engagement: 4/10
