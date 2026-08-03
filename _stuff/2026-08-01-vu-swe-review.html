@@ -4,7 +4,8 @@ description: My review of every subject in the Vilnius University Software Engin
 ---
 
 {% comment %}
-  Content lives in _data/stuff/vu-review/.
+  Content lives in _data/stuff/vu-swe-review/. Only files named
+  semester-<number>.yml are rendered.
 {% endcomment %}
 
 <p>
@@ -42,10 +43,16 @@ description: My review of every subject in the Vilnius University Software Engin
 
 <br>
 
-{%- assign semesters = site.data.stuff.vu-review | sort -%}
+{%- assign semesters = site.data.stuff.vu-swe-review | sort -%}
 
 <div class="stack">
 {% for entry in semesters %}
+  {%- assign number = entry[0] | remove_first: "semester-" | plus: 0 -%}
+  {%- capture expected -%}semester-{{ number }}{%- endcapture -%}
+  {%- unless entry[0] == expected -%}
+    {%- continue -%}
+  {%- endunless -%}
+
   {%- assign semester = entry[1] -%}
 
   {% capture semester_body %}
