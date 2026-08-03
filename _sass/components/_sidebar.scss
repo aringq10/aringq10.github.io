@@ -31,12 +31,6 @@
   text-decoration: none;
 }
 
-.sidebar__desc {
-  color: var(--text-muted);
-  font-size: $font-size-sm;
-  margin: 0.15rem 0 0;
-}
-
 // Dropdown button — hidden on desktop.
 .sidebar__toggle {
   align-items: center;

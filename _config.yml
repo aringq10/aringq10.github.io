@@ -1,9 +1,8 @@
-url: "https://aringq10.github.io" # the base hostname & protocol for your site
+url: "https://aringas.dev" # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # Sidebar
 title: "Aringas Civilka"
-description:
 lang: "en"
 
 footer_text:
@@ -27,8 +26,18 @@ socials:
     icon: email
     url: "mailto:aringas.benas.civilka@gmail.com"
 
+# jekyll-seo-tag
+description: "Software engineering student at Vilnius University. Notes and projects."
+author: "Aringas Civilka"
+social:
+  name: "Aringas Civilka"
+  links:
+    - "https://github.com/aringq10"
+
 plugins:
   - jekyll-target-blank
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 collections:
   stuff:
@@ -52,6 +61,10 @@ defaults:
       type: "pages"
     values:
       nav_order: 100
+  - scope:
+      path: "assets"
+    values:
+      sitemap: false
 
 exclude:
   - Gemfile

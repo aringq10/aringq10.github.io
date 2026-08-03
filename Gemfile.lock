@@ -42,6 +42,10 @@ GEM
       webrick (~> 1.7)
     jekyll-sass-converter (3.1.0)
       sass-embedded (~> 1.75)
+    jekyll-seo-tag (2.9.0)
+      jekyll (>= 3.8, < 5.0)
+    jekyll-sitemap (1.4.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-target-blank (2.0.2)
       jekyll (>= 3.0, < 5.0)
       nokogiri (~> 1.10)
@@ -84,6 +88,8 @@ DEPENDENCIES
   csv (~> 3.3)
   erb (~> 5.0)
   jekyll (~> 4.4)
+  jekyll-seo-tag
+  jekyll-sitemap
   jekyll-target-blank (~> 2.0)
   webrick (~> 1.8)
 
@@ -104,6 +110,8 @@ CHECKSUMS
   i18n (1.14.7) sha256=ceba573f8138ff2c0915427f1fc5bdf4aa3ab8ae88c8ce255eb3ecf0a11a5d0f
   jekyll (4.4.1) sha256=4c1144d857a5b2b80d45b8cf5138289579a9f8136aadfa6dd684b31fe2bc18c1
   jekyll-sass-converter (3.1.0) sha256=83925d84f1d134410c11d0c6643b0093e82e3a3cf127e90757a85294a3862443
+  jekyll-seo-tag (2.9.0) sha256=0260015a8e1df9bf195cdfb0c675b7b2883fd8cbf12556e1c1cbe36a831c6852
+  jekyll-sitemap (1.4.0) sha256=0de08c5debc185ea5a8f980e1025c7cd3f8e0c35c8b6ef592f15c46235cf4218
   jekyll-target-blank (2.0.2) sha256=db988ba0b1a12b9841a864e77939ffecc27fbdce28916cec631ea047e6b91f94
   jekyll-watch (2.2.1) sha256=bc44ed43f5e0a552836245a54dbff3ea7421ecc2856707e8a1ee203a8387a7e1
   json (2.15.0) sha256=bc24d490a1d81bcbf6b45ee5c02695545d4ed37f679cee879b789a2bbb53ad5c

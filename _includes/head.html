@@ -9,9 +9,7 @@
   {%- endif -%}
 </title>
 
-{%- if page.description or site.description %}
-<meta name="description" content="{{ page.description | default: site.description }}">
-{%- endif %}
+{% seo title=false %}
 
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
