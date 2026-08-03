@@ -1,0 +1,29 @@
+en dm ca mse1 pi pp
+
+difficulty:
+5 ca, dm, mse1
+2 pp, en
+1 pi
+
+workload:
+6 dm, ca
+4 mse1, pp, en
+1 pi
+
+usefulness:
+10 dm, ca
+8 pp, mse1
+7 pi
+4 en
+
+quality:
+7 dm
+6 ca
+4 mse1, pp
+2 pi, en
+
+takeaway:
+10 ca, dm, mse1
+3 pp
+1 pi
+0 en

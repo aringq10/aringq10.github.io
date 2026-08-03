@@ -16,9 +16,10 @@ subjects:
       TBD
     evaluation:
       - Difficulty:
-      - Usefulness:
       - Workload:
-      - Engagement:
+      - Usefulness:
+      - Quality:
+      - Takeaway:
   - title: Algorithm Theory
     professors:
       - Adomas Birštunas
@@ -26,9 +27,10 @@ subjects:
       TBD
     evaluation:
       - Difficulty:
-      - Usefulness:
       - Workload:
-      - Engagement:
+      - Usefulness:
+      - Quality:
+      - Takeaway:
   - title: Mathematics for Software Engineering 2/3
     professors:
       - Gintautas Bareikis (Lectures)
@@ -37,9 +39,10 @@ subjects:
       TBD
     evaluation:
       - Difficulty:
-      - Usefulness:
       - Workload:
-      - Engagement:
+      - Usefulness:
+      - Quality:
+      - Takeaway:
   - title: Object Oriented Programming
     professors:
       - Rimantas Vaicekauskas (Lectures)
@@ -48,9 +51,10 @@ subjects:
       TBD
     evaluation:
       - Difficulty:
-      - Usefulness:
       - Workload:
-      - Engagement:
+      - Usefulness:
+      - Quality:
+      - Takeaway:
   - title: Object Oriented Programming C++ (Optional)
     professors:
       - Irmantas Radavičius
@@ -58,9 +62,10 @@ subjects:
       TBD
     evaluation:
       - Difficulty:
-      - Usefulness:
       - Workload:
-      - Engagement:
+      - Usefulness:
+      - Quality:
+      - Takeaway:
   - title: Žmogus, buitis ir chemija (Optional)
     professors:
       - Aivaras Kareiva
@@ -68,6 +73,7 @@ subjects:
       TBD
     evaluation:
       - Difficulty:
-      - Usefulness:
       - Workload:
-      - Engagement:
+      - Usefulness:
+      - Quality:
+      - Takeaway:

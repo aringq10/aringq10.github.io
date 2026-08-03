@@ -66,6 +66,16 @@
   font-size: $font-size-sm;
 }
 
+// For kv-lists whose values are prose, not figures — a legend, a glossary.
+.kv-list--prose {
+  row-gap: 0.2rem;
+
+  .kv-list__value {
+    color: var(--text-muted);
+    font-family: inherit;
+  }
+}
+
 // A vertical run of bare links — downloads, further reading.
 .link-list {
   list-style: none;

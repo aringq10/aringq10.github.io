@@ -40,10 +40,11 @@ subjects:
       everyone learns best through the internet and talking to people. Professor
       tried her best though.
     evaluation:
-      - Difficulty: 3/10
-      - Usefulness: 2/10
+      - Difficulty: 2/10
       - Workload: 4/10
-      - Engagement: 2/10
+      - Usefulness: 4/10
+      - Quality: 2/10
+      - Takeaway: 0/10
   - title: Discrete Mathematics
     professors:
       - Gintaras Skersys
@@ -65,9 +66,10 @@ subjects:
       Other topics were: sets, functions, math proofs, turing machine, encoding, compression.
     evaluation:
       - Difficulty: 5/10
-      - Usefulness: 8/10
       - Workload: 6/10
-      - Engagement: 7/10
+      - Usefulness: 10/10
+      - Quality: 7/10
+      - Takeaway: 10/10
   - title: Computer Architecture
     professors:
       - Vytautas Valaitis (Lectures)
@@ -93,10 +95,11 @@ subjects:
       [The Elements of Computing Systems](https://www.nand2tetris.org/) and
       [CS:APP](https://csapp.cs.cmu.edu/3e/home.html).
     evaluation:
-      - Difficulty: 6/10
-      - Usefulness: 8/10
-      - Workload: 5/10
-      - Engagement: 7/10
+      - Difficulty: 5/10
+      - Workload: 6/10
+      - Usefulness: 10/10
+      - Quality: 6/10
+      - Takeaway: 10/10
   - title: Mathematics for Software Engineering 1/3
     professors:
       - Edmundas Mazėtis
@@ -117,10 +120,11 @@ subjects:
       the mentioned 3B1B playlist and
       [Introduction to Linear Algebra by Gilbert Strang](https://math.mit.edu/~gs/linearalgebra/).
     evaluation:
-      - Difficulty: 6/10
-      - Usefulness: 6/10
-      - Workload: 5/10
-      - Engagement: 5/10
+      - Difficulty: 5/10
+      - Workload: 4/10
+      - Usefulness: 8/10
+      - Quality: 4/10
+      - Takeaway: 10/10
   - title: Practical Informatics
     professors:
       - A. V. Misiukas Misiūnas (Lectures)
@@ -133,10 +137,11 @@ subjects:
       Git, Python and Latex. But you don't learn practical things just by reading
       slides, which is what this class was.
     evaluation:
-      - Difficulty: 3/10 *look out for Ž
-      - Usefulness: 5/10
-      - Workload: 2/10
-      - Engagement: 2/10
+      - Difficulty: 1/10 *look out for Ž
+      - Workload: 1/10
+      - Usefulness: 7/10
+      - Quality: 2/10
+      - Takeaway: 1/10
   - title: Procedural Programming
     professors:
       - Irmantas Radavičius
@@ -150,7 +155,8 @@ subjects:
       so I'm guessing the professor was grading more of our understanding
       and thinking than our final answers.
     evaluation:
-      - Difficulty: 3/10
-      - Usefulness: 4/10
+      - Difficulty: 2/10
       - Workload: 4/10
-      - Engagement: 4/10
+      - Usefulness: 8/10
+      - Quality: 4/10
+      - Takeaway: 3/10
