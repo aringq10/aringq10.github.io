@@ -1,6 +1,6 @@
 ---
 title: Package managers
-excerpt: Registries, the local package DB, dependency resolution and keyrings.
+description: Registries, the local package DB, dependency resolution and keyrings.
 ---
 
 # There a 3 main components

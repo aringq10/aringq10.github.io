@@ -1,6 +1,6 @@
 ---
 title: Good Apps
-excerpt: Some good, free and useful apps.
+description: Some good, free and useful apps.
 ---
 
 [StayFree](https://stayfreeapps.com/) - App, Website usage tracking and blocking.  

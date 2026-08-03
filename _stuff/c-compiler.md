@@ -1,6 +1,6 @@
 ---
 title: C compiler
-excerpt: How the preprocessor, compiler and linker find headers and libraries.
+description: How the preprocessor, compiler and linker find headers and libraries.
 ---
 
 # Include files

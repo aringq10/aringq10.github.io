@@ -1,6 +1,6 @@
 ---
 title: Modded Minecraft
-excerpt: Modlist for personal MC world.
+description: Modlist for personal MC world.
 ---
 
 Minecraft **1.21.1**

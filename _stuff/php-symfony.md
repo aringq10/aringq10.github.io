@@ -1,6 +1,6 @@
 ---
 title: PHP / Symfony
-excerpt: The DI container, bundles, the request lifecycle and routing.
+description: The DI container, bundles, the request lifecycle and routing.
 ---
 
 # DI, container
