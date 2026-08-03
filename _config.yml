@@ -38,6 +38,7 @@ plugins:
   - jekyll-target-blank
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-last-modified-at
 
 collections:
   stuff:

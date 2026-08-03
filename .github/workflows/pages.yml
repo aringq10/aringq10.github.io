@@ -18,7 +18,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # fetch-depth: 0 gets the full history. jekyll-last-modified-at reads each
+      # file's commit time from git; with the default shallow clone it finds no
+      # history and falls back to file mtime, which in CI is checkout time - so
+      # every build would stamp a fresh "modified" date.
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: ruby/setup-ruby@v1
         with:
