@@ -1,29 +1,47 @@
 en dm ca mse1 pi pp
+ads at mse2 oop ocpp z
 
 difficulty:
+8 mse2
+6 at
 5 ca, dm, mse1
-2 pp, en
+4 ocpp
+2 pp, ads, en, oop
 1 pi
+0 z
 
 workload:
+7 ocpp
 6 dm, ca
-4 mse1, pp, en
+5 at
+4 mse1, pp, en, ads, mse2
+3 oop
 1 pi
+0 z
 
 usefulness:
-10 dm, ca
-8 pp, mse1
-7 pi
+10 dm, ca, ads
+9 pp, mse1, oop, ocpp
+8 pi
+7 at
+5 mse2
 4 en
+0 z
 
 quality:
-7 dm
-6 ca
+8 at, ocpp
+7 dm, z
+6 ca, oop
+5 oop
 4 mse1, pp
-2 pi, en
+3 ads
+2 pi, en, mse2
 
 takeaway:
 10 ca, dm, mse1
+8 at, ocpp
+4 oop
 3 pp
-1 pi
-0 en
+2 mse2
+1 pi, ads
+0 en, z

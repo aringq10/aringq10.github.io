@@ -13,36 +13,69 @@ subjects:
       - Vytautas Valaitis (Lectures)
       - Jonas Žagūnas (Labs)
     review: |
-      TBD
+      All in all, this was a very boring one. I've gotta say, ADS interests me,
+      though it'll have to wait, because I couldn't get myself to study it in
+      this course. The labs were pretty bad too - it would have made no difference
+      if we had them or not; we had to do 4 coding assignments implementing
+      different data structures, but I and everyone I asked did not get any value
+      from them. I went to a couple of lectures and the slides seemed well made,
+      but the presentation and the whole vibe was depressing. Though I can't be
+      sure if it was the slides or ADS that caught my interest. Probably the latter.
+      The lectures went over various algorithms and data structures.
     evaluation:
-      - Difficulty:
-      - Workload:
-      - Usefulness:
-      - Quality:
-      - Takeaway:
+      - Difficulty: 2 *look out for Ž
+      - Workload: 4
+      - Usefulness: 10
+      - Quality: 3
+      - Takeaway: 1
   - title: Algorithm Theory
     professors:
-      - Adomas Birštunas
+      - Adomas "aišku tikiuosi" Birštunas
     review: |
-      TBD
+      The professor carried this course. Very cool guy, I even got to play table
+      tennis with him once. The material is available as an english PDF by him
+      or another lithuanian PDF by his former student, both available on his
+      website. There are recordings of his lectures back from Covid as well.
+      However, I'd still recommend everyone to attend his lectures and labs,
+      because it's entertaining and he explains things well; and because the
+      PDFs aren't very readable.
+
+      The material isn't very difficult: it builds on the discrete math class from
+      the previous semester by teaching various math-proof techniques; it
+      discusses algorithms and how fast they grow, lambda calculus, turing
+      machines, and functions among other things.
     evaluation:
-      - Difficulty:
-      - Workload:
-      - Usefulness:
-      - Quality:
-      - Takeaway:
+      - Difficulty: 6
+      - Workload: 5
+      - Usefulness: 7
+      - Quality: 8
+      - Takeaway: 8
   - title: Mathematics for Software Engineering 2/3
     professors:
       - Gintautas Bareikis (Lectures)
       - Rimvydas Krasauskas (Labs)
     review: |
-      TBD
+      This class covered sequences, series, limits, derivatives and integrals.
+      The lectures were fast paced, to the point that the professor kept going
+      on without any regard for whether the students were still following along.
+      Everyone I asked had completely lost the plot after the first couple of
+      lectures - from that point on you had to study from home to catch up.
+
+      The difficulty ultimately came from this. I personally don't think calculus
+      is that difficult, but this class sure made it seem that way.
+
+      The labs didn't help as well, we were stuck at the basic definition of
+      convergence and deriving simple functions for the better half of the
+      semester. Afterwards I started skipping them and just studied for the
+      tests myself. I found the provided PDFs too difficult for self-study, so
+      I turned to Claude to summarize everything and just went with memorization
+      and grinding instead of understanding. Thanks Claude.
     evaluation:
-      - Difficulty:
-      - Workload:
-      - Usefulness:
-      - Quality:
-      - Takeaway:
+      - Difficulty: 8
+      - Workload: 4
+      - Usefulness: 5
+      - Quality: 2
+      - Takeaway: 2
   - title: Object Oriented Programming
     professors:
       - Rimantas Vaicekauskas (Lectures)
@@ -50,30 +83,34 @@ subjects:
     review: |
       TBD
     evaluation:
-      - Difficulty:
-      - Workload:
-      - Usefulness:
-      - Quality:
-      - Takeaway:
+      - Difficulty: 2
+      - Workload: 3
+      - Usefulness: 9
+      - Quality: 5
+      - Takeaway: 4
   - title: Object Oriented Programming C++ (Optional)
     professors:
       - Irmantas Radavičius
     review: |
       TBD
     evaluation:
-      - Difficulty:
-      - Workload:
-      - Usefulness:
-      - Quality:
-      - Takeaway:
+      - Difficulty: 4
+      - Workload: 7
+      - Usefulness: 9
+      - Quality: 8
+      - Takeaway: 8
   - title: Žmogus, buitis ir chemija (Optional)
     professors:
       - Aivaras Kareiva
     review: |
-      TBD
+      I chose this class as a filler so I could have more free time. It's fully
+      online and attendance is not mandatory. It's just the professor showing his
+      slides and explaining things. I sat through a couple of the lectures and
+      the topics sounded basic but interesting. The grade came from 3 online tests
+      on moodle, with no kind of supervision.
     evaluation:
-      - Difficulty:
-      - Workload:
-      - Usefulness:
-      - Quality:
-      - Takeaway:
+      - Difficulty: 0
+      - Workload: 0
+      - Usefulness: 0
+      - Quality: 7
+      - Takeaway: 0
