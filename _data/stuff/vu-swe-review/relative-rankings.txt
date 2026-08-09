@@ -29,17 +29,17 @@ usefulness:
 0 z
 
 quality:
-8 at, ocpp
-7 dm, z
-6 ca, oop
-5 oop
+8 at
+7 dm, ocpp
+6 ca, z, oop
 4 mse1, pp
 3 ads
 2 pi, en, mse2
 
 takeaway:
 10 ca, dm, mse1
-8 at, ocpp
+8 at
+7 ocpp
 4 oop
 3 pp
 2 mse2
