@@ -36,13 +36,18 @@ description: Teaching myself Computer Science
           </tr>
           {% for row in topic.progress.rows %}
             <tr>
-              <td>{{ row.title | strip | newline_to_br | markdownify }}</td>
-              <td>
-                {{ row.data | strip | newline_to_br | markdownify }}
-                {% if row.comment %}
-                  <div class="note">{{ row.comment | markdownify }}</div>
+              {% for col in row.cols %}
+                {% if col.v %}
+                  <td>
+                    {{ col.v | strip | newline_to_br | markdownify }}
+                    {% if col.c %}
+                      <div class="note">{{ col.c | prepend: "\* " | markdownify }}</div>
+                    {% endif %}
+                  </td>
+                {% else %}
+                  <td>{{ col | strip | newline_to_br | markdownify }}</td>
                 {% endif %}
-              </td>
+              {% endfor %}
             </tr>
           {% endfor %}
         </table>
