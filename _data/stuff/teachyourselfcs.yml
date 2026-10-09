@@ -2,13 +2,13 @@
 # string or an object with v (value) and c (comment) fields.
 
 - title: |
-    **Computer Networking: A Top-Down Approach**
+    **Computer Networking: A Top-Down Approach (8e)**
     By *Jim Kurose* and *Keith Ross*
   preface-links:
-    - link: "https://gaia.cs.umass.edu/kurose_ross/index.php"
-      text: "Authors' Website"
-    - link: "https://media.pearsoncmg.com/ph/esm/ecs_kurose_compnetwork_8/cw/"
-      text: "Student Resources"
+    - link: https://gaia.cs.umass.edu/kurose_ross/index.php
+      text: Authors' Website
+    - link: https://media.pearsoncmg.com/ph/esm/ecs_kurose_compnetwork_8/cw/
+      text: Student Resources
   progress:
     title: |
       2025-2026
@@ -21,28 +21,28 @@
         (Daily-time)
     rows:
       - cols:
-        - Ch. 1 & 2(180p)
+        - Ch. 1 & 2(180)
         - |
           NaN - Dec 3
           (?)
           (?)
           (?)
       - cols:
-        - Ch. 3(122p)
+        - Ch. 3(122)
         - |
           Dec 4 - Dec 11
           (7.5h/12h)
           (6/8)
           (1.9 1.3 1.4 0 2.8 0 1.4 3.3)
       - cols:
-        - Ch. 4(74p)
+        - Ch. 4(74)
         - |
           Dec 18 - Dec 21
           (3h/7.2h)
           (4/4)
           (1.2 0.8 2.3 3)
       - cols:
-        - Ch. 5(72p)
+        - Ch. 5(72
         - v: |
             Dec 22 - Dec 30
             (8.6h/13.6h)
@@ -59,7 +59,7 @@
             [dv]:https://github.com/aringq10/uni-hw/tree/main/onmyown/comp-netw/programming-assigments/dv-routing
             [ping]:https://github.com/aringq10/uni-hw/tree/main/onmyown/comp-netw/programming-assigments/icmp
       - cols:
-        - Ch. 6(82p)
+        - Ch. 6(82)
         - v: |
             Jan 8 - Jan 14
             (1.8h/6h)
@@ -70,20 +70,56 @@
             didn't seem very interesting.
 
 - title: |
-    **Structure and Interpretation of Computer Programs**
+    **Structure and Interpretation of Computer Programs (2e)**
     By *Harold Abelson* and *Gerald Jay Sussman* with *Julie Sussmane*
   preface-links:
-    - link: "https://sarabander.github.io/sicp/html/index.xhtml"
-      text: "Link to a free web version"
+    - link: https://sarabander.github.io/sicp/html/index.xhtml
+      text: Link to a free web version
   preface: |
     TBD
 
 - title: |
-    **Computer Systems: A Programmer's Perspective**
+    **Computer Systems: A Programmer's Perspective (3e)**
     By *Randal E. Bryant* and *David R. O'Hallaron*
   preface-links:
-    - link: "https://csapp.cs.cmu.edu/3e/home.html"
-      text: "Home website"
-  preface: |
-    TBD
+    - link: https://csapp.cs.cmu.edu/3e/home.html
+      text: Home website
+    - link: https://csapp.cs.cmu.edu/3e/labs.html
+      text: Labs
+    - link: https://github.com/yangwenbo99/csapp-global-errata
+      text: Unofficial errata for the global edition of CS:APP
+  progress:
+    title: |
+      2026
+    header:
+      - Chapter(pages) / Lab
+      - |
+        Started - Finished
+        (Time-spent-excl-hw/Total-time)
+        (Days-studied/Total-days)
+        (Daily-time)
+    rows:
+      - cols:
+        - Ch. 3(188)
+        - v: |
+            Sep 24 - Oct 6
+            (4.6/20.2)
+            (12/13)
+            (1.9 1.3 1.3 0.6 0 0.6 2.5 2.2 1.5 3.7 1.8 1.3 1.5)
+          c: |
+            Realized I was reading the 2nd edition late in the chapter, spent
+            2.5h skimming the parts I'd read but in the 3rd edition. The chapter
+            taught me the foundations of x86_64 assembly, its stack frame and
+            register conventions, and arrays/structs/unions in memory. Also a
+            bit of gdb.
+      - cols:
+        - Bomb lab
+        - v: |
+            Oct 7 - Oct 9
+            (7.7)
+            (3/3)
+            (2.5 4 1.2)
+          c: |
+            Cool lab. [My solution][bomb-lab].
 
+            [bomb-lab]:https://github.com/aringq10/uni-hw/tree/main/onmyown/cs-app/labs/bomb
