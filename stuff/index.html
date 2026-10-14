@@ -5,7 +5,7 @@ description: Stuff I thought I'd note down and share with the internet.
 nav_order: 2
 ---
 
-{%- assign entries = site.stuff | sort_natural: "title" -%}
+{%- assign entries = site.stuff | sort: 'last_modified_at' | reverse -%}
 
 {%- if entries.size > 0 %}
 <div class="filter" data-filter hidden>
@@ -26,6 +26,7 @@ nav_order: 2
   <li class="entry-list__item">
     <div class="entry-list__row">
       <a class="entry-list__link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      <p class="note">{{ item.last_modified_at | date: '%Y-%m-%d' }}</p>
     </div>
     {%- if desc != "" %}
     <p class="entry-list__desc" title="{{ desc }}">{{ desc }}</p>

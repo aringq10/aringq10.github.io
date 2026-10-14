@@ -17,13 +17,21 @@
 .entry-list__row {
   align-items: baseline;
   display: flex;
-  flex-wrap: wrap;
   gap: $space-sm;
   justify-content: space-between;
+
+  > :not(.entry-list__link) {
+    flex: none;
+    margin: 0;
+    white-space: nowrap;
+  }
 }
 
 .entry-list__link {
+  overflow: hidden;
   text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   &:hover {
     text-decoration: underline;
