@@ -5,7 +5,7 @@
   {%- if page.url == "/" -%}
     {{ site.title }}
   {%- else -%}
-    {{ page.title | default: site.title }} &middot; {{ site.title }}
+    {% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.title }}
   {%- endif -%}
 </title>
 
