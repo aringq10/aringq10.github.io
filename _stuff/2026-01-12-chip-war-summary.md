@@ -1,7 +1,10 @@
 ---
 title: Chip War Summary
 description: Chapter summary of Chip War by Chris Miller.
+modified_from:
+  - _data/stuff/chip-war-summary.yml
 ---
+
 [Chip War by Chris Miller](https://www.amazon.com/Chip-War-Worlds-Critical-Technology/dp/1982172002)
 <br>
 <br>

@@ -1,6 +1,8 @@
 ---
 title: Modded Minecraft
 description: Modlist for personal MC world.
+modified_from:
+  - _data/stuff/mc-modlist.yml
 ---
 
 Minecraft **1.21.1**
