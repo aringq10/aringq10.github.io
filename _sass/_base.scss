@@ -46,6 +46,9 @@ pre,
 table {
   margin: 0 0 $space;
 }
+ul ul, ol ol {
+    margin: 0;
+}
 
 a {
   color: var(--link);
