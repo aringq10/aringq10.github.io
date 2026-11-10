@@ -12,6 +12,12 @@
   text-transform: uppercase;
 }
 
+.muted {
+  color: var(--text-muted);
+  font-size: $font-size-sm;
+  font-style: italic;
+}
+
 // An aside under a block of content — a caveat, a footnote, a "* but...".
 .note {
   color: var(--text-muted);

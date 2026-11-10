@@ -29,39 +29,30 @@ modified_from:
     {% endif %}
 
     {% if topic.progress %}
-      {% capture progress_table %}
-        <table class="data-table">
+      Progress <p class="muted">{{ topic.progress.title }}</p>
+      <table class="data-table">
+        <tr>
+          {% for header in topic.progress.header %}
+            <th>{{ header | strip | newline_to_br | markdownify }}</th>
+          {% endfor %}
+        </tr>
+        {% for row in topic.progress.rows %}
           <tr>
-            {% for header in topic.progress.header %}
-              <th>{{ header | strip | newline_to_br | markdownify }}</th>
+            {% for col in row.cols %}
+              {% if col.v %}
+                <td>
+                  {{ col.v | strip | newline_to_br | markdownify }}
+                  {% if col.c %}
+                    <div class="note">{{ col.c | prepend: "\* " | markdownify }}</div>
+                  {% endif %}
+                </td>
+              {% else %}
+                <td>{{ col | strip | newline_to_br | markdownify }}</td>
+              {% endif %}
             {% endfor %}
           </tr>
-          {% for row in topic.progress.rows %}
-            <tr>
-              {% for col in row.cols %}
-                {% if col.v %}
-                  <td>
-                    {{ col.v | strip | newline_to_br | markdownify }}
-                    {% if col.c %}
-                      <div class="note">{{ col.c | prepend: "\* " | markdownify }}</div>
-                    {% endif %}
-                  </td>
-                {% else %}
-                  <td>{{ col | strip | newline_to_br | markdownify }}</td>
-                {% endif %}
-              {% endfor %}
-            </tr>
-          {% endfor %}
-        </table>
-      {% endcapture %}
-
-      {% capture progress_title %}Progress
-        {{ topic.progress.title }}{% endcapture %}
-
-      {% include dropdown.html
-        summary=progress_title
-        body=progress_table
-      %}
+        {% endfor %}
+      </table>
     {% endif %}
   {% endcapture %}
 

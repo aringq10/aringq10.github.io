@@ -97,15 +97,13 @@
         Started - Finished
         (Time-spent-excl-hw/Total-time)
         (Days-studied/Total-days)
-        (Daily-time)
     rows:
       - cols:
         - Ch. 3(188)
         - v: |
             Sep 24 - Oct 6
-            (4.6/20.2)
+            (15.6/20.2)
             (12/13)
-            (1.9 1.3 1.3 0.6 0 0.6 2.5 2.2 1.5 3.7 1.8 1.3 1.5)
           c: |
             Realized I was reading the 2nd edition late in the chapter, spent
             2.5h skimming the parts I'd read but in the 3rd edition. The chapter
@@ -118,8 +116,18 @@
             Oct 7 - Oct 9
             (7.7)
             (3/3)
-            (2.5 4 1.2)
           c: |
             Cool lab. [My solution][bomb-lab].
 
             [bomb-lab]:https://github.com/aringq10/uni-hw/tree/main/onmyown/cs-app/labs/bomb
+      - cols:
+        - Ch. 4(144)
+        - v: |
+            Oct 10 - Nov 8
+            (12.5/13.5)
+            (13/30)
+          c: |
+            Learned a small subset of x86-64, "Y86-64". the SEQ cpu was very
+            similar to the one from nand2tetris, so not much there. PIPE,
+            however was something new and pretty cool tbh. Skipped on some hw
+            problems and the arch lab, may come back to it in the future.
