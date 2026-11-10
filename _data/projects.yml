@@ -21,3 +21,7 @@
 - title: Ping
   desc: A messenger app with accounts and instant messaging - Flask, SQLite and flask-socketio. My final project for CS50x.
   link: https://github.com/aringq10/Ping
+
+- title: track
+  desc: A node-cron job polling my study activities from Toggl Track into a single view so I can track my progress.
+  link: https://github.com/aringq10/track
