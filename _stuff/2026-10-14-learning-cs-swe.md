@@ -1,5 +1,5 @@
 ---
-title: Learning
+title: Learning CS/SWE
 ---
 
 # Sources
