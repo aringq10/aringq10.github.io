@@ -5,8 +5,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 title: "Aringas Civilka"
 lang: "en"
 
-footer_text:
-
 # Sidebar theme picker. Each `id` must match a key in the $themes map in
 # _sass/_variables.scss, which is where the colors live. Order is respected.
 themes:
