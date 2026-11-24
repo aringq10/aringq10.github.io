@@ -1,8 +1,5 @@
 @use "variables" as *;
 
-@use "block";
-@use "inline";
-
 *,
 *::before,
 *::after {
@@ -18,46 +15,153 @@ body {
   line-height: $line-height;
 }
 
-pre {
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: $space-lg 0 $space-sm;
+  color: var(--color-heading);
+  line-height: $line-height-tight;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4, h5, h6 { font-size: 1rem; }
+
+// Paragraph
+p {
   margin: 0 0 $space;
 }
 
-:focus,
-:focus-visible {
-  outline: none;
+// Link
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--color-link-hover);
+    text-decoration: none;
+  }
 }
 
-img,
-video {
-  max-width: 100%;
-  height: auto;
+// Lists
+ul, ol {
+  margin: 0 0 $space;
+  padding-left: $space;
+  list-style-position: inside;
+}
+li ul, li ol {
+  margin: 0;
 }
 
-code,
-pre {
+// Dropdown
+details:not(.theme-picker) {
+  margin: 0 0 $space;
+
+  .body {
+    padding-left: $font-size-lg;
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  summary {
+    cursor: pointer;
+    display: flex;
+    list-style: none; // hides the native marker
+
+    &::before {
+      color: var(--color-text-muted);
+      font-size: $font-size-lg;
+      content: "▸";
+      flex: 0 0 1em;
+    }
+    .title p {
+      margin: 0;
+
+      &:first-child {
+        color: var(--color-heading);
+        font-size: $font-size-lg;
+        font-weight: 600;
+      }
+
+      &:not(:first-child) {
+        color: var(--color-text-muted);
+        font-size: $font-size-sm;
+      }
+    }
+  }
+
+  &[open] summary {
+    margin-bottom: $space-sm
+  }
+
+  &[open] summary::before {
+    content: "▾";
+  }
+}
+
+// Table
+table {
+  width: 100%;
+  margin: 0 0 $space;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th,
+td {
+  padding: $space-sm;
+  border: $border-width solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: var(--color-table-th-bg);
+  font-size: $font-size-sm;
+}
+
+// Horizontal line separator
+hr {
+  margin: $space-lg 0;
+  border: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+// Callout
+.callout {
+  margin: 0 0 $space;
+  padding: $space;
+  background: var(--color-callout-bg);
+  border-left: 4px solid var(--color-callout-border);
+
+  > :last-child {
+    margin-bottom: 0
+  }
+}
+
+// Code
+pre, code {
   font-family: $font-mono;
   font-size: $font-size-sm;
 }
 
-code {
+code:not(pre code) {
   background: var(--color-code-bg);
   border-radius: 3px;
+  border-radius: $radius;
   padding: 0.1em 0.3em;
 }
 
 pre {
+  margin: 0 0 $space;
   background: var(--color-code-bg);
   border: $border-width solid var(--color-border);
   border-radius: $radius;
   padding: $space;
   overflow-x: auto;
-
-  code {
-    background: none;
-    padding: 0;
-  }
-}
-
-button {
-  font: inherit;
 }
