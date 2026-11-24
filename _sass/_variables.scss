@@ -93,6 +93,9 @@ $themes: (
   tokyonight: $theme-tokyonight
 ) !default;
 
+// Themes with a matching _sass/syntax/_<name>.scss partial.
+$syntax-themes: (light, dark, tokyonight) !default;
+
 // Themes that should get `color-scheme: dark`, so scrollbars and form controls
 // match.
 $dark-themes: (dark, tokyonight) !default;
