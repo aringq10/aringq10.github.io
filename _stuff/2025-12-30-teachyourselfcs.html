@@ -31,7 +31,7 @@ modified_from:
 
     {% if topic.progress %}
       Progress <p class="muted">{{ topic.progress.title }}</p>
-      <table class="data-table">
+      <table>
         <tr>
           {% for header in topic.progress.header %}
             <th>{{ header | strip | newline_to_br | markdownify }}</th>
