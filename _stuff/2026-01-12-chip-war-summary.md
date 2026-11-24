@@ -1,6 +1,7 @@
 ---
 title: Chip War Summary
 description: Chapter summary of Chip War by Chris Miller.
+ignore_self: true
 modified_from:
   - _data/stuff/chip-war-summary.yml
 ---

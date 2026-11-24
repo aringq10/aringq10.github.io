@@ -1,6 +1,7 @@
 # Sets last_modified_at to the most recent git commit date across a page’s own
 # file and optionally any files or directories listed in its modified_from front
-# matter.
+# matter. Set ignore_self: true to leave the page’s own file out of the check.
+# An existing last_modified_at is left untouched.
 
 require 'time'
 
@@ -18,6 +19,9 @@ module ModifiedFrom
       end
     end
 
+    specs.delete(own) if item.data['ignore_self']
+    return if specs.empty?
+
     out = IO.popen(
       ['git', '-C', site.source, 'log', '-1', '--format=%cI', '--', *specs.uniq],
       err: File::NULL, &:read
@@ -28,6 +32,8 @@ module ModifiedFrom
 end
 
 Jekyll::Hooks.register [:pages, :documents], :pre_render, priority: :low do |item, _payload|
+  next if item.data.key?('last_modified_at')
+
   latest = ModifiedFrom.latest_commit_date(item)
   item.data['last_modified_at'] = latest if latest
 end

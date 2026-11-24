@@ -1,6 +1,7 @@
 ---
 title: Modded Minecraft
 description: Modlist for personal MC world.
+ignore_self: true
 modified_from:
   - _data/stuff/mc-modlist.yml
 ---
