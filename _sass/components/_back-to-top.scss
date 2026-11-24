@@ -3,11 +3,11 @@
 // Markup in _includes/back-to-top.html.
 .back-to-top {
   align-items: center;
-  background: var(--bg-surface);
-  border: $border-width solid var(--border);
+  background: var(--color-bg-surface);
+  border: $border-width solid var(--color-border);
   border-radius: 50%;
   bottom: $space;
-  color: var(--text-muted);
+  color: var(--color-text-muted);
   cursor: pointer;
   display: flex;
   height: 2.5rem;
@@ -23,8 +23,8 @@
 
   &:hover,
   &:focus-visible {
-    border-color: var(--focus);
-    color: var(--link);
+    border-color: var(--color-focus);
+    color: var(--color-link);
   }
 }
 

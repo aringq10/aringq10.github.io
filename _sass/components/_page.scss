@@ -1,7 +1,7 @@
 @use "../variables" as *;
 
 .page__header {
-  border-bottom: $border-width solid var(--border);
+  border-bottom: $border-width solid var(--color-border);
   margin-bottom: $space-lg;
   padding-bottom: $space;
 }
@@ -11,7 +11,7 @@
 }
 
 .page__desc {
-  color: var(--text-muted);
+  color: var(--color-text-muted);
   font-size: $font-size-sm;
   margin: $space-sm 0 0;
 }

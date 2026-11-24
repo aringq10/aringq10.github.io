@@ -9,7 +9,7 @@
 }
 
 .entry-list__item {
-  border-bottom: $border-width solid var(--border);
+  border-bottom: $border-width solid var(--color-border);
   padding: $space-sm 0;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .entry-list__desc {
-  color: var(--text-muted);
+  color: var(--color-text-muted);
   font-size: $font-size-sm;
   margin: 0.15rem 0 0;
   overflow: hidden;
@@ -55,5 +55,5 @@
 }
 
 .entry-list__item--empty {
-  color: var(--text-muted);
+  color: var(--color-text-muted);
 }

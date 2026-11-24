@@ -9,7 +9,7 @@
   padding-top: $space;
 
   & + & {
-    border-top: $border-width solid var(--border);
+    border-top: $border-width solid var(--color-border);
     margin-top: $space-lg;
   }
 }
@@ -28,6 +28,6 @@
 // A separator between blocks, tighter than a bare <hr>. Works on any element.
 .divider {
   border: 0;
-  border-top: $border-width solid var(--border);
+  border-top: $border-width solid var(--color-border);
   margin: $space 0;
 }

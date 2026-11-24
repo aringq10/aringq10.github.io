@@ -26,7 +26,7 @@
 // JS so the right row is already checked on first paint.
 @each $name, $theme in $themes {
   [data-theme="#{$name}"] .theme-picker__option[data-theme="#{$name}"] {
-    color: var(--accent);
+    color: var(--color-accent);
     font-weight: 600;
 
     &::after {

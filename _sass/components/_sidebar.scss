@@ -6,8 +6,8 @@
 // toggle and footer live in .sidebar__panel, which the button drops down.
 // ---------------------------------------------------------------------------
 .sidebar {
-  background: var(--bg-sidebar);
-  border-bottom: $border-width solid var(--border);
+  background: var(--color-bg-surface);
+  border-bottom: $border-width solid var(--color-border);
 }
 
 .sidebar__bar {
@@ -23,7 +23,7 @@
 }
 
 .sidebar__title {
-  color: var(--heading);
+  color: var(--color-heading);
   display: block;
   font-size: 1.15rem;
   font-weight: 600;
@@ -35,9 +35,9 @@
 .sidebar__toggle {
   align-items: center;
   background: none;
-  border: $border-width solid var(--border);
+  border: $border-width solid var(--color-border);
   border-radius: $radius;
-  color: var(--text);
+  color: var(--color-text);
   cursor: pointer;
   display: flex;
   flex: none;
@@ -46,7 +46,7 @@
   width: 2.25rem;
 
   &:hover {
-    background: var(--bg-hover);
+    background: var(--color-bg-hover);
   }
 }
 
@@ -75,31 +75,31 @@
 
 .nav__link {
   border-radius: $radius;
-  color: var(--text);
+  color: var(--color-text);
   display: block;
   padding: $space-sm;
   text-decoration: none;
 
   &:hover {
-    background: var(--bg-hover);
-    color: var(--text);
+    background: var(--color-bg-hover);
+    color: var(--color-text);
   }
 
   &--current {
-    color: var(--accent);
+    color: var(--color-accent);
     font-weight: 600;
   }
 }
 
 // Footer ------------------------------------------------------------------
 .sidebar__footer {
-  border-top: $border-width solid var(--border);
+  border-top: $border-width solid var(--color-border);
   margin-top: $space;
   padding-top: $space;
 }
 
 .sidebar__footer-text {
-  color: var(--text-muted);
+  color: var(--color-text-muted);
   font-size: $font-size-xs;
   margin: $space-sm 0 0;
 }
@@ -110,7 +110,7 @@
 @media (min-width: $breakpoint-mobile) {
   .sidebar {
     border-bottom: 0;
-    border-right: $border-width solid var(--border);
+    border-right: $border-width solid var(--color-border);
     display: flex;
     flex-direction: column;
     height: 100vh;

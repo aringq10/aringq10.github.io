@@ -17,9 +17,9 @@ params:
   | split: "<br />"
 -%}
 
-<details class="dropdown">
-  <summary class="dropdown__summary">
-    <div class="dropdown__title">
+<details>
+  <summary>
+    <div class="title">
       {%- for line in summary_lines -%}
         {%- assign trimmed = line | strip -%}
         {%- if trimmed != "" -%}
@@ -43,7 +43,7 @@ params:
     </div>
   </summary>
 
-  <div class="dropdown__body">
+  <div class="body">
     {{- include.body -}}
   </div>
 </details>

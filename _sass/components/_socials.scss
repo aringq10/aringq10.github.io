@@ -10,7 +10,7 @@
 .social {
   align-items: center;
   border-radius: $radius;
-  color: var(--text);
+  color: var(--color-text);
   display: flex;
   font-size: $font-size-xs;
   gap: $space-sm * 0.75;
@@ -18,8 +18,8 @@
   text-decoration: none;
 
   &:hover {
-    background: var(--bg-hover);
-    color: var(--link);
+    background: var(--color-bg-hover);
+    color: var(--color-link);
   }
 
   // currentColor means one asset serves both themes.

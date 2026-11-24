@@ -26,55 +26,61 @@ $transition: 150ms ease !default;
 // Themes ------------------------------------------------------------------
 // see _theme.scss
 $theme-light: (
-  bg: #fdfdfc,
-  bg-sidebar: #f4f3f0,
-  bg-surface: #ffffff,
-  bg-hover: #e8e6e0,
-  text: #1b1b1a,
-  text-muted: #6c6b66,
-  text-inverted: #fdfdfc,
-  heading: #101010,
-  link: #1f6f5c,
-  link-hover: #14503f,
-  accent: #1f6f5c,
-  border: #e2e0d9,
-  code-bg: #f1efe9,
-  focus: #1f6f5c
+  color-bg: #fdfdfc,
+  color-bg-surface: #f4f3f0,
+  color-bg-hover: #e8e6e0,
+  color-text: #1b1b1a,
+  color-text-muted: #6c6b66,
+  color-text-inverted: #fdfdfc,
+  color-heading: #101010,
+  color-link: #1f6f5c,
+  color-link-hover: #14503f,
+  color-accent: #1f6f5c,
+  color-border: #d8d8d8,
+  color-focus: #1f6f5c,
+  color-code-bg: #f4f3f0,
+  color-callout-bg: #f4f3f0,
+  color-callout-border: #6c6b66,
+  color-table-th-bg: #f4f3f0
 ) !default;
 
 $theme-dark: (
-  bg: #17181b,
-  bg-sidebar: #1e2024,
-  bg-surface: #22242a,
-  bg-hover: #2c2f36,
-  text: #e6e5e1,
-  text-muted: #9b9a94,
-  text-inverted: #17181b,
-  heading: #f5f4f1,
-  link: #6fd3b3,
-  link-hover: #9ce4cd,
-  accent: #6fd3b3,
-  border: #2f3238,
-  code-bg: #22242a,
-  focus: #6fd3b3
+  color-bg: #17181b,
+  color-bg-surface: #1e2024,
+  color-bg-hover: #2c2f36,
+  color-text: #e6e5e1,
+  color-text-muted: #9b9a94,
+  color-text-inverted: #17181b,
+  color-heading: #f5f4f1,
+  color-link: #6fd3b3,
+  color-link-hover: #9ce4cd,
+  color-accent: #6fd3b3,
+  color-border: #2f3238,
+  color-focus: #6fd3b3,
+  color-code-bg: #1e2024,
+  color-callout-bg: #1e2024,
+  color-callout-border: #2f3238,
+  color-table-th-bg: #1e2024
 ) !default;
 
 // https://github.com/folke/tokyonight.nvim — the "night" variant.
 $theme-tokyonight: (
-  bg: #1a1b26,
-  bg-sidebar: #16161e,
-  bg-surface: #24283b,
-  bg-hover: #292e42,
-  text: #c0caf5,
-  text-muted: #9aa5ce,
-  text-inverted: #1a1b26,
-  heading: #d5dbf5,
-  link: #7aa2f7,
-  link-hover: #7dcfff,
-  accent: #bb9af7,
-  border: #292e42,
-  code-bg: #16161e,
-  focus: #7aa2f7
+  color-bg: #1a1b26,
+  color-bg-surface: #16161e,
+  color-bg-hover: #292e42,
+  color-text: #c0caf5,
+  color-text-muted: #9aa5ce,
+  color-text-inverted: #1a1b26,
+  color-heading: #d5dbf5,
+  color-link: #7aa2f7,
+  color-link-hover: #7dcfff,
+  color-accent: #bb9af7,
+  color-border: #292e42,
+  color-focus: #7aa2f7,
+  color-code-bg: #16161e,
+  color-callout-bg: #16161e,
+  color-callout-border: #292e42,
+  color-table-th-bg: #16161e
 ) !default;
 
 // Every key here becomes a theme: a [data-theme] block in _theme.scss and an

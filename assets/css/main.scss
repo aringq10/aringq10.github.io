@@ -15,11 +15,7 @@
 @use "components/theme-picker";
 @use "components/entry-list";
 @use "components/chevron";
-@use "components/dropdown";
 @use "components/back-to-top";
 @use "components/text";
 @use "components/section";
 @use "components/table";
-
-// Utilities last — single-purpose helpers should win.
-@use "utilities";
